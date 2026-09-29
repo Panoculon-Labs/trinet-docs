@@ -1,0 +1,137 @@
+/* Trinet Documentation — brand layer on top of Material for MkDocs.
+   Palette follows panoculonlabs.com: black / near-white with a warm amber accent. */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+  --trinet-amber: #f4b25a;
+  --trinet-amber-deep: #a8620a;
+  --trinet-ink: #0b0b0d;
+  --trinet-radius: 14px;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--trinet-ink);
+  --md-primary-fg-color--light: #2a2a2e;
+  --md-primary-fg-color--dark: #000;
+  --md-primary-bg-color: #f5f5f6;
+  --md-accent-fg-color: var(--trinet-amber-deep);
+  --md-accent-fg-color--transparent: rgba(168, 98, 10, .1);
+  --md-typeset-a-color: var(--trinet-amber-deep);
+  --md-default-bg-color: #ffffff;
+  --trinet-card-bg: #fafaf9;
+  --trinet-card-border: #e7e5e4;
+  --trinet-muted: #57534e;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 240;
+  --md-default-bg-color: #0b0b0d;
+  --md-default-bg-color--light: #131316;
+  --md-code-bg-color: #16161a;
+  --md-primary-fg-color: #000;
+  --md-primary-fg-color--light: #18181b;
+  --md-primary-fg-color--dark: #000;
+  --md-primary-bg-color: #f4f4f5;
+  --md-accent-fg-color: var(--trinet-amber);
+  --md-accent-fg-color--transparent: rgba(244, 178, 90, .12);
+  --md-typeset-a-color: var(--trinet-amber);
+  --trinet-card-bg: #131316;
+  --trinet-card-border: #27272a;
+  --trinet-muted: #a1a1aa;
+}
+
+.md-header, .md-tabs { background-color: #000; color: #f4f4f5; }
+.md-tabs__link--active, .md-tabs__link:hover { color: var(--trinet-amber); }
+.md-header__title { font-weight: 600; letter-spacing: -.01em; }
+
+.md-typeset h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h2 { font-weight: 650; letter-spacing: -.01em; }
+.md-typeset table:not([class]) { font-size: .74rem; border-radius: 10px; overflow: hidden; }
+.md-typeset table:not([class]) th { background: var(--md-accent-fg-color--transparent); }
+
+/* ---------- home hero */
+.trinet-hero {
+  margin: -.6rem 0 2rem;
+  padding: 2.6rem 2rem 2.2rem;
+  border-radius: 20px;
+  background:
+    radial-gradient(1100px 380px at 85% -40%, rgba(244, 178, 90, .28), transparent 60%),
+    linear-gradient(180deg, #0b0b0d, #111114);
+  color: #f4f4f5;
+}
+.trinet-hero h1 {
+  color: #fff !important;
+  font-size: 2.35rem;
+  line-height: 1.1;
+  margin: 0 0 .6rem;
+}
+.trinet-hero p { color: #d4d4d8; font-size: .92rem; max-width: 40rem; margin: 0 0 1.2rem; }
+.trinet-hero .md-button { margin: .3rem .4rem .3rem 0; }
+.trinet-hero .md-button--primary {
+  background: var(--trinet-amber); border-color: var(--trinet-amber); color: #111 !important;
+}
+.trinet-hero .md-button:not(.md-button--primary) { color: #f4f4f5 !important; border-color: #52525b; }
+.trinet-hero .md-button:hover { filter: brightness(1.08); }
+
+/* ---------- cards */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-radius: var(--trinet-radius);
+  border: 1px solid var(--trinet-card-border);
+  background: var(--trinet-card-bg);
+  transition: border-color .15s, transform .15s;
+}
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--md-accent-fg-color); transform: translateY(-1px); }
+.md-typeset .grid.cards .twemoji { color: var(--md-accent-fg-color); }
+
+.trinet-badge {
+  display: inline-block; font-size: .64rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: .1rem .5rem; border-radius: 999px; background: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color); vertical-align: middle;
+}
+
+/* ---------- LED indicator dots */
+.led {
+  display: inline-block; width: .9em; height: .9em; border-radius: 50%; vertical-align: -.1em;
+  margin-right: .35em; border: 1px solid rgba(0, 0, 0, .25);
+  box-shadow: 0 0 .5em currentColor;
+}
+.led-green   { background: #22c55e; color: #22c55e; }
+.led-blue    { background: #3b82f6; color: #3b82f6; }
+.led-red     { background: #ef4444; color: #ef4444; }
+.led-orange  { background: #f59e0b; color: #f59e0b; }
+.led-white   { background: #fafafa; color: #d4d4d8; }
+.led-cyan    { background: #22d3ee; color: #22d3ee; }
+.led-magenta { background: #e879f9; color: #e879f9; }
+.led-off     { background: #3f3f46; color: transparent; box-shadow: none; }
+.led-blink-fast { animation: led-blink .2s steps(2) infinite; }
+.led-blink      { animation: led-blink .6s steps(2) infinite; }
+.led-blink-slow { animation: led-blink 4s steps(2) infinite; }
+@keyframes led-blink { 50% { opacity: .15; box-shadow: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .led-blink-fast, .led-blink, .led-blink-slow { animation: none; }
+}
+
+/* ---------- steps */
+.md-typeset ol.steps { counter-reset: step; list-style: none; padding-left: 0; }
+.md-typeset ol.steps > li {
+  counter-increment: step; position: relative; padding-left: 2.4rem; margin-bottom: .9rem;
+}
+.md-typeset ol.steps > li::before {
+  content: counter(step); position: absolute; left: 0; top: -.05rem; width: 1.6rem; height: 1.6rem;
+  border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .75rem;
+  background: var(--md-accent-fg-color); color: #111;
+}
+
+/* ---------- spec table */
+.md-typeset .spec-table table { width: 100%; display: table; }
+.md-typeset .spec-table td:first-child { width: 38%; color: var(--trinet-muted); font-weight: 600; }
+
+/* ---------- product photo */
+.md-typeset figure img { border-radius: var(--trinet-radius); }
+.md-typeset figcaption { color: var(--trinet-muted); font-size: .7rem; }

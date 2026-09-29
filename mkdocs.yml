@@ -1,0 +1,188 @@
+site_name: Trinet Documentation
+site_url: https://docs.panoculonlabs.com/
+site_description: >-
+  Official documentation for Trinet wearable cameras by Panoculon Labs — set up, record, sync
+  cameras, use the Trinet app, update firmware, and build with the SDK and Python toolkit.
+site_author: Panoculon Labs
+copyright: >-
+  &copy; 2026 Panoculon Labs Pvt. Ltd. ·
+  <a href="https://www.panoculonlabs.com/privacy-policy">Privacy</a> ·
+  <a href="https://www.panoculonlabs.com/terms-and-conditions">Terms</a>
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: false
+
+hooks:
+  - hooks/llms.py
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.panoculonlabs.com/trinet
+      name: Trinet on panoculonlabs.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/Panoculon-Labs
+      name: Panoculon Labs on GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/panoculon-labs
+      name: LinkedIn
+    - icon: fontawesome/solid/envelope
+      link: mailto:innovate@panoculonlabs.com
+      name: Email Panoculon Labs
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+not_in_nav: |
+  /includes/*
+
+nav:
+  - Home: index.md
+  - Products:
+      - products/index.md
+      - Trinet Mono: products/mono.md
+      - Trinet Stereo: products/stereo.md
+      - Trinet Stereo GS: products/stereo-gs.md
+      - Trinet Wrist Kit: products/wrist-kit.md
+      - Which camera do I have?: products/which-camera.md
+  - Get started:
+      - get-started/index.md
+      - Record your first take: get-started/first-recording.md
+      - LED indications: get-started/led-indications.md
+      - Button: get-started/button.md
+      - Recording modes: get-started/modes.md
+      - Use as a USB camera: get-started/usb-camera.md
+      - Set up a Wrist Kit: get-started/wrist-kit-setup.md
+      - Files on the card: get-started/files-on-the-card.md
+      - Mounting: get-started/mounting.md
+  - Power & care:
+      - power-and-care/index.md
+      - Tested power banks: power-and-care/power-banks.md
+      - Heat and thermal protection: power-and-care/thermal.md
+      - Memory cards: power-and-care/memory-cards.md
+      - Care and handling: power-and-care/care.md
+  - Trinet app:
+      - app/index.md
+      - Record and review: app/record-and-review.md
+      - Camera settings: app/camera-settings.md
+      - Wireless status: app/wireless-status.md
+  - Firmware:
+      - firmware/index.md
+      - Firmware release notes: firmware/release-notes.md
+      - App & SDK release notes: firmware/app-sdk-release-notes.md
+  - Your data:
+      - data/index.md
+      - Timing and sync: data/sync.md
+      - File formats: data/file-formats.md
+  - Python toolkit:
+      - toolkit/index.md
+      - Inspect and repair: toolkit/inspect-and-repair.md
+      - Visualize and check sync: toolkit/visualize.md
+      - Export to MCAP / ROS 2: toolkit/mcap.md
+      - Put recordings on UTC: toolkit/wireless-utc.md
+      - Ingest SD cards: toolkit/ingest.md
+      - Stereo and 3D: toolkit/stereo-and-3d.md
+  - Calibration:
+      - calibration/index.md
+      - Reference calibrations: calibration/reference-calibrations.md
+      - Use a calibration: calibration/use-a-calibration.md
+  - Build apps:
+      - sdk/index.md
+      - "Android: get started": sdk/android/getting-started.md
+      - "Android: stream and preview": sdk/android/streaming.md
+      - "Android: record and play back": sdk/android/recording.md
+      - "Android: IMU data": sdk/android/imu.md
+      - "Android: wireless status": sdk/android/wireless-status.md
+      - "Android: API overview": sdk/android/api.md
+      - iOS SDK: sdk/ios.md
+      - USB transports: sdk/transports.md
+  - Support:
+      - support/index.md
+      - Troubleshooting: support/troubleshooting.md
+      - FAQ: support/faq.md
+      - Warranty: support/warranty.md
+      - Glossary: support/glossary.md

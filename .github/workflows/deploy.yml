@@ -1,0 +1,75 @@
+name: Build and deploy docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history for "last updated" dates
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # The list of terms that must never appear on the public site is kept in the
+      # DISCLOSURE_REGEX secret, not in this repository. Pushes to main fail closed
+      # without it; pull requests from forks (no secrets) skip with a warning.
+      - name: Disclosure check (sources)
+        env:
+          DISCLOSURE_REGEX: ${{ secrets.DISCLOSURE_REGEX }}
+        run: |
+          if [ -z "$DISCLOSURE_REGEX" ]; then
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              echo "::warning::DISCLOSURE_REGEX secret not available; skipping disclosure check"; exit 0
+            fi
+            echo "::error::DISCLOSURE_REGEX secret is not set"; exit 1
+          fi
+          if grep -rnP "$DISCLOSURE_REGEX" docs/ mkdocs.yml overrides/ hooks/ README.md; then
+            echo "::error::Restricted terms found (see matches above)"; exit 1
+          fi
+
+      - name: Build
+        run: mkdocs build --strict
+
+      - name: Disclosure check (built site)
+        env:
+          DISCLOSURE_REGEX: ${{ secrets.DISCLOSURE_REGEX }}
+        run: |
+          [ -z "$DISCLOSURE_REGEX" ] && exit 0
+          if grep -rlP "$DISCLOSURE_REGEX" site/ --include=*.html --include=*.txt; then
+            echo "::error::Restricted terms found in the built site"; exit 1
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
