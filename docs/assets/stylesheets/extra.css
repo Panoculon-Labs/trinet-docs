@@ -78,6 +78,11 @@
 .trinet-hero .md-button:not(.md-button--primary) { color: #f4f4f5 !important; border-color: #52525b; }
 .trinet-hero .md-button:hover { filter: brightness(1.08); }
 
+@media screen and (max-width: 44.9375em) {
+  .trinet-hero { padding: 1.8rem 1.2rem 1.6rem; }
+  .trinet-hero h1 { font-size: 1.75rem; overflow-wrap: normal; word-break: normal; hyphens: none; }
+}
+
 /* ---------- cards */
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid.cards > ol > li {

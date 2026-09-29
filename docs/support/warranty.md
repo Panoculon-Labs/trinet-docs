@@ -37,7 +37,7 @@ Calibration is covered only as described in the official terms.
 ## Dead on arrival
 
 Inspect your cameras on delivery. A camera reported non-functional in writing **within 3 days** of
-delivery is replaced at our cost, including shipping both ways.
+delivery is replaced free of charge, including shipping both ways.
 
 ## Making a claim
 
