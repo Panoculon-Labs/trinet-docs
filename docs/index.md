@@ -101,9 +101,9 @@ Not sure which one you have? See [Which camera do I have?](products/which-camera
 
     ---
 
-    Update from the Trinet app in about 30 seconds, and see what changed in every release.
+    Update from the Trinet app in a few minutes, and see what changed in every release.
 
-    [:octicons-arrow-right-24: Firmware](firmware/index.md)
+    [:octicons-arrow-right-24: How to update](get-started/update-firmware.md)
 
 -   :material-language-python:{ .lg .middle } **Python toolkit**
 

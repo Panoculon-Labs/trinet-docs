@@ -38,13 +38,15 @@ Android dialog. (Android asks for the camera permission too — USB video needs 
 
 ## Home screen
 
+![Trinet app home screen with a camera connected](../assets/images/app/app-home.webp){ .app-shot loading=lazy }
+
 | Tile | What it's for |
 |---|---|
 | **Record** | Live preview and recording — [Record and review](record-and-review.md) |
 | **Library** | Your recordings on the phone |
 | **Wireless status** | Cameras and kits recording to their cards nearby — [Wireless status](wireless-status.md) |
 | **Camera settings** | Picture, sound, video and advanced settings — [Camera settings](camera-settings.md) |
-| **Update firmware** | Check for and install camera firmware — [Firmware](../firmware/index.md) |
+| **Update firmware** | Check for and install camera firmware — [how to update](../get-started/update-firmware.md) |
 
 The app uses a dark interface on purpose, so you can judge the picture accurately.
 

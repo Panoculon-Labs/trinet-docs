@@ -1,6 +1,6 @@
 ---
 title: Update the firmware
-description: Update Trinet camera firmware from the Trinet app in about 30 seconds, and check which version your camera runs.
+description: Update Trinet camera firmware from the Trinet app, and check which version your camera runs.
 ---
 
 # Update the firmware
@@ -11,17 +11,11 @@ Android.
 
 ## Update from the app
 
-<ol class="steps" markdown>
-<li markdown>**Prepare the camera.** Turn it off and **remove its memory card**.</li>
-<li markdown>**Connect it to the phone.** The light turns <span class="led led-white"></span> white.
-Wait until the app shows the camera as connected (allow access if asked).</li>
-<li markdown>**Open Update firmware.** The app checks for updates automatically and shows the installed
-version, for example *Firmware v0.5.8 · Update available (v0.5.9)*.</li>
-<li markdown>**Tap Download & install** and keep the camera plugged in. The camera switches to update mode
-— the light turns <span class="led led-magenta"></span> **pink** — and the progress bar runs.</li>
-<li markdown>**Wait.** In about 30 seconds the camera restarts by itself on the new firmware.
-**Don't unplug or restart it while the light is pink.**</li>
-</ol>
+Connect the camera to your phone without its memory card, open **Update firmware** in the Trinet
+app and tap **Download & install**. Keep the camera plugged in until the app says it's done —
+usually about 30 seconds.
+
+[:material-update: Step-by-step guide with screenshots](../get-started/update-firmware.md){ .md-button .md-button--primary }
 
 !!! success "Safe by design"
     Each camera model has its own update channel, so a camera is never offered firmware for a

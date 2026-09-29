@@ -161,6 +161,15 @@
 .md-typeset .photo-row img.product-shot { width: 100%; height: 13rem; }
 .md-typeset .photo-row:has(> figure:only-child) { max-width: 18rem; }
 .md-typeset .grid.cards img.product-shot { width: 100%; height: 9rem; padding: .6rem; margin-bottom: .4rem; }
+.md-typeset img.app-shot {
+  display: block;
+  width: 100%;
+  max-width: 13rem;
+  border-radius: 18px;
+  border: 1px solid var(--trinet-card-border);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+}
+.md-typeset .photo-row:has(img.app-shot) { grid-template-columns: repeat(auto-fill, minmax(11rem, 13rem)); max-width: none; }
 .md-typeset .product-hero { float: right; width: 15rem; margin: 0 0 1rem 1.2rem; }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .product-hero { float: none; width: 70%; margin: 0 auto 1rem; }
