@@ -10,6 +10,17 @@ over a short-range radio link, start and stop together, and stamp every frame on
 timeline — so the view from your head and the close-up views of both hands can be lined up
 frame by frame.
 
+<div class="photo-row" markdown>
+<figure markdown>
+  ![Back of a Wrist Kit camera with the radio-beacon adapter attached](../assets/images/product/wrist-kit-beacon-attached.webp){ .product-shot loading=lazy }
+  <figcaption>Each kit camera carries a small radio-beacon adapter on the back.</figcaption>
+</figure>
+<figure markdown>
+  ![Camera back with the radio-beacon adapter removed](../assets/images/product/wrist-kit-beacon-removed.webp){ .product-shot loading=lazy }
+  <figcaption>The adapter is removable — keep it attached for kit recording.</figcaption>
+</figure>
+</div>
+
 ## How it works
 
 - **Factory-paired.** A kit arrives already paired: power the cameras on and they find each other.

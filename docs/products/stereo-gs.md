@@ -10,6 +10,11 @@ image is exposed at the same instant, so fast hand, tool and head motion is capt
 skew and wobble of a rolling shutter. Everything else — two eyes 70 mm apart, motion data, audio,
 factory calibration, the app and the SDK — works exactly like Trinet Stereo.
 
+<figure markdown>
+  ![Trinet stereo camera, front view](../assets/images/product/stereo-front.webp){ .product-shot width="420" loading=lazy }
+  <figcaption>Trinet Stereo GS shares the Trinet Stereo form factor: two lenses, 70 mm apart.</figcaption>
+</figure>
+
 ## Specifications
 
 <div class="spec-table" markdown>

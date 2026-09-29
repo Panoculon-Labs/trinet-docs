@@ -11,10 +11,14 @@ involved.
 <ol class="steps" markdown>
 
 <li markdown>**Insert a memory card.** Use an exFAT-formatted microSD card
-([which cards](../power-and-care/memory-cards.md)). Insert it before powering the camera.</li>
+([which cards](../power-and-care/memory-cards.md)). Insert it before powering the camera.
+<div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/insert-sd-card.webp" alt="Inserting a microSD card into the camera" loading="lazy"><figcaption>Slide the card in, contacts first.</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/sd-card-inserted.webp" alt="microSD card fully inserted" loading="lazy"><figcaption>Fully inserted.</figcaption></figure></div>
+</li>
 
 <li markdown>**Remove the lens cap.** Pull it straight off. Don't twist the lens — the focus is set at
-the factory.</li>
+the factory.
+<div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/mono-lens-cap-on.webp" alt="Camera with the lens cap on" loading="lazy"><figcaption>Lens cap on.</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/mono-lens-cap-off.webp" alt="Camera with the lens cap removed" loading="lazy"><figcaption>Lens cap off — ready to record.</figcaption></figure></div>
+</li>
 
 <li markdown>**Connect power.** Plug the USB-C cable into the camera and into a power bank or
 charger. The light blinks <span class="led led-orange led-blink-fast"></span> **orange** while the
@@ -25,16 +29,19 @@ repairing recordings from an earlier session (for example after power was pulled
 Don't unplug it — it turns green when done.</li>
 
 <li markdown>**Wait for green.** A solid <span class="led led-green"></span> **green** light means
-ready.</li>
+ready.
+<div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/led-green-ready.webp" alt="Status light solid green" loading="lazy"><figcaption>Green: ready.</figcaption></figure></div>
+</li>
 
 <li markdown>**Press the button to record.** Tap the button once. The light turns
-<span class="led led-blue"></span> **blue** — you're recording.</li>
+<span class="led led-blue"></span> **blue** — you're recording.
+<div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/led-blue-recording.webp" alt="Status light solid blue" loading="lazy"><figcaption>Blue: recording.</figcaption></figure></div>
+</li>
 
 <li markdown>**Press again to stop.** The light turns <span class="led led-white"></span> **white**
 while the camera finishes saving the take, then <span class="led led-green"></span> **green**.
 
-!!! danger "Don't unplug while the light is white"
-    White means the take is still being written. Wait for green before removing power or the card.
+<div class="admonition danger"><p class="admonition-title">Don't unplug while the light is white</p><p>White means the take is still being written. Wait for green before removing power or the card.</p></div>
 
 </li>
 

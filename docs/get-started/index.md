@@ -5,6 +5,9 @@ description: What you need to start recording with a Trinet camera, and the two 
 
 # Get started
 
+
+<div class="photo-row"><figure><img class="product-shot" src="../assets/images/product/mono-front.webp" alt="Trinet Mono, front" loading="lazy"><figcaption>Trinet Mono</figcaption></figure><figure><img class="product-shot" src="../assets/images/product/stereo-front.webp" alt="Trinet Stereo, front" loading="lazy"><figcaption>Trinet Stereo / Stereo GS</figcaption></figure></div>
+
 A Trinet camera works in two ways:
 
 <div class="grid cards" markdown>

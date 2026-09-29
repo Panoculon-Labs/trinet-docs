@@ -8,6 +8,9 @@ description: What every colour and blink pattern of the Trinet status light mean
 The status light tells you what the camera is doing. Patterns: **solid**, **blink** (steady on/off),
 **fast blink** (rapid flicker) and **slow blink** (about two seconds on, two seconds off).
 
+
+<div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/led-green-ready.webp" alt="Status light green" loading="lazy"><figcaption>Green — ready</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/led-blue-recording.webp" alt="Status light blue" loading="lazy"><figcaption>Blue — recording</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/led-white-usb.webp" alt="Status light white" loading="lazy"><figcaption>White — saving, repairing, or USB camera ready</figcaption></figure></div>
+
 ## Recording to a memory card
 
 | Light | Meaning | What to do |

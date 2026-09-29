@@ -16,7 +16,8 @@ computer records it.
     <li markdown>**Remove the memory card** from the camera (or use a [mode file](modes.md#the-mode-file)
     with `mode=uvc`).</li>
     <li markdown>**Connect the camera to the phone** with a USB-C cable. The light turns
-    <span class="led led-white"></span> **white** when the camera is ready.</li>
+    <span class="led led-white"></span> **white** when the camera is ready.
+    <div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/led-white-usb.webp" alt="Status light solid white in USB mode" loading="lazy"><figcaption>White: ready as a USB camera.</figcaption></figure></div></li>
     <li markdown>**Open the app and allow access** when Android asks for permission to use the camera
     (this can take a few seconds to appear). The app shows *Camera ready*.</li>
     <li markdown>**Tap Record.** You'll see the live preview; tap record to save to the phone. See

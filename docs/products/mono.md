@@ -5,6 +5,10 @@ description: Trinet Mono — a single ultra-wide wearable camera with synchroniz
 
 # Trinet Mono
 
+<figure class="product-hero" markdown>
+  ![Trinet Mono, front view](../assets/images/product/mono-front.webp){ .product-shot loading=lazy }
+</figure>
+
 Trinet Mono is a single ultra-wide camera that records 1080p video, motion data and stereo audio
 on one shared clock. It records on its own to a memory card, streams live over USB to an Android
 phone, a computer or an iPhone, and can join other Trinet cameras in a synchronized kit.

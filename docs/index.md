@@ -24,7 +24,9 @@ your own software.
 
 <div class="grid cards" markdown>
 
--   :material-camera-iris:{ .lg .middle } **Trinet Mono**
+-   ![Trinet Mono](assets/images/product/mono-front.webp){ .product-shot loading=lazy }
+
+    **Trinet Mono**
 
     ---
 
@@ -32,7 +34,9 @@ your own software.
 
     [:octicons-arrow-right-24: Trinet Mono](products/mono.md)
 
--   :material-camera-burst:{ .lg .middle } **Trinet Stereo**
+-   ![Trinet Stereo](assets/images/product/stereo-front.webp){ .product-shot loading=lazy }
+
+    **Trinet Stereo**
 
     ---
 
@@ -41,7 +45,9 @@ your own software.
 
     [:octicons-arrow-right-24: Trinet Stereo](products/stereo.md)
 
--   :material-camera-control:{ .lg .middle } **Trinet Stereo GS**
+-   ![Trinet Stereo GS](assets/images/product/stereo-front.webp){ .product-shot loading=lazy }
+
+    **Trinet Stereo GS**
 
     ---
 
@@ -49,7 +55,9 @@ your own software.
 
     [:octicons-arrow-right-24: Trinet Stereo GS](products/stereo-gs.md)
 
--   :material-hand-back-right:{ .lg .middle } **Trinet Wrist Kit**
+-   ![Trinet Wrist Kit camera with radio-beacon adapter](assets/images/product/wrist-kit-beacon-attached.webp){ .product-shot loading=lazy }
+
+    **Trinet Wrist Kit**
 
     ---
 
