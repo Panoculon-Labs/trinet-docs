@@ -71,9 +71,9 @@ In USB modes, apps built with the [SDK](../sdk/index.md) can also set the light 
 
 ## Microphone mute switch
 
-On cameras with a microphone mute switch, the light flashes <span class="led led-red"></span> red for
-one second when you mute and <span class="led led-green"></span> green when you unmute, then returns
-to its previous colour.
+When you move the [microphone mute switch](mute-switch.md) on the bottom of the camera, the light
+flashes <span class="led led-red"></span> red for one second when you mute and
+<span class="led led-green"></span> green when you unmute, then returns to its previous colour.
 
 !!! tip "Not listed here?"
     If you see a colour or pattern that isn't on this page, disconnect power, wait a few seconds and

@@ -16,7 +16,7 @@ temperature), manual exposure, and the status light.
 
 ## Sound
 
-On cameras with microphones: mute, automatic gain, gain level and sample rate (16, 44.1 or 48 kHz).
+On cameras with microphones: mute, automatic gain, gain level and sample rate (16, 44.1 or 48 kHz). The camera also has a [hardware mute switch](../get-started/mute-switch.md).
 
 ## Video
 

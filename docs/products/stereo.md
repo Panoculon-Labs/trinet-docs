@@ -30,7 +30,7 @@ ready for stereo depth, 3D reconstruction and stereo visual-inertial odometry.
 | Lens | Ultra-wide fisheye; effective field of view about 158° horizontal × 94° vertical per eye (from calibration) |
 | Frame timing | Timestamped at mid-exposure of the centre image row; rolling-shutter readout about 32 ms, reported per frame |
 | Motion sensing | 3-axis accelerometer (±8 g), 3-axis gyroscope (±2000 °/s) at 400 Hz; 3-axis magnetometer at about 100 Hz |
-| Audio | Stereo microphones, AAC, 44.1 kHz on card recordings |
+| Audio | Stereo microphones, AAC, 44.1 kHz on card recordings; [hardware mute switch](../get-started/mute-switch.md) |
 | IMU–video alignment | Sub-millisecond, hardware-timestamped |
 | Recording to card | One button; no limit on take length |
 | Live streaming | USB webcam mode: one 3840×1080 side-by-side stream (both eyes) to Android or a computer |

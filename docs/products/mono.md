@@ -29,7 +29,7 @@ versions are listed [below](#earlier-versions).
 | Lens | Ultra-wide fisheye; effective field of view about 139° horizontal × 73° vertical (from calibration) |
 | Frame timing | Every frame timestamped at the middle of its exposure, on the camera clock |
 | Motion sensing | 3-axis accelerometer (±8 g), 3-axis gyroscope (±2000 °/s) at 400 Hz; 3-axis magnetometer at about 100 Hz |
-| Audio | Stereo microphones, AAC, 48 kHz by default (16, 44.1 or 48 kHz selectable) |
+| Audio | Stereo microphones, AAC, 48 kHz by default (16, 44.1 or 48 kHz selectable); [hardware mute switch](../get-started/mute-switch.md) |
 | IMU–video alignment | Sub-millisecond, hardware-timestamped |
 | Recording to card | One button; up to 8 hours per take (the take is then saved automatically) |
 | Live streaming | USB webcam mode (Android, computer) and iPhone mode |
