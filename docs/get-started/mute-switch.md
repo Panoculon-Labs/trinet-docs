@@ -19,6 +19,8 @@ The direction depends on the model:
 | **Trinet Stereo** | Switch moved **towards the USB-C** port | Switch moved **away from the USB-C** port |
 | **Trinet Stereo GS** | Switch moved **away from the USB-C** port | Switch moved **towards the USB-C** port |
 
+<div class="photo-row" style="max-width:26rem"><figure><img src="../../assets/images/product/stereo-mute-switch-unmuted.webp" alt="Bottom of Trinet Stereo: mute switch moved towards the USB-C port (unmuted)" loading="lazy" style="width:100%"><figcaption>Trinet Stereo, <strong>unmuted</strong>: switch towards the USB-C port.</figcaption></figure><figure><img src="../../assets/images/product/stereo-mute-switch-muted.webp" alt="Bottom of Trinet Stereo: mute switch moved away from the USB-C port (muted)" loading="lazy" style="width:100%"><figcaption>Trinet Stereo, <strong>muted</strong>: switch away from the USB-C port.</figcaption></figure></div>
+
 !!! warning "Stereo and Stereo GS are opposite"
     On Trinet Stereo GS the switch works the other way round from Trinet Stereo. If you use both in a
     [Wrist Kit](wrist-kit-setup.md), check each camera — or watch the light, below.
