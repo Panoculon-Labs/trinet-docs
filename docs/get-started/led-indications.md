@@ -15,8 +15,7 @@ The status light tells you what the camera is doing. Patterns: **solid**, **blin
 
 | Light | Meaning | What to do |
 |---|---|---|
-| <span class="led led-orange led-blink-fast"></span> Orange, fast blink | Starting up, waiting for the memory card | Wait |
-| <span class="led led-white"></span> White, solid — at start-up or after inserting a card | Checking and repairing earlier recordings | **Don't power off.** Wait for green |
+| <span class="led led-white"></span> White, solid — at start-up or after inserting a card | Starting up and processing earlier recordings (repairing any interrupted take) | **Don't power off.** Wait for green |
 | <span class="led led-green"></span> Green, solid | Ready | Tap the button to record |
 | <span class="led led-blue"></span> Blue, solid | Recording | Tap the button to stop |
 | <span class="led led-white"></span> White, solid — after stopping | Saving the take | **Don't power off or remove the card.** Wait for green |

@@ -21,12 +21,10 @@ the factory.
 </li>
 
 <li markdown>**Connect power.** Plug the USB-C cable into the camera and into a power bank or
-charger. The light blinks <span class="led led-orange led-blink-fast"></span> **orange** while the
-camera starts up.
-
-If the light turns <span class="led led-white"></span> **white** first, the camera is checking and
-repairing recordings from an earlier session (for example after power was pulled mid-take).
-Don't unplug it — it turns green when done.</li>
+charger. The light turns <span class="led led-white"></span> **white** straight away while the
+camera starts up and processes recordings from earlier sessions (for example repairing a take after
+power was pulled mid-recording). This can take a little while. Don't unplug it — it turns green when
+done.</li>
 
 <li markdown>**Wait for green.** A solid <span class="led led-green"></span> **green** light means
 ready.

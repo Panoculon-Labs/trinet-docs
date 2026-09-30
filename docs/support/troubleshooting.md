@@ -9,19 +9,15 @@ Start with the [status light](../get-started/led-indications.md) — it usually 
 
 ## Recording to a card
 
-??? question "The light blinks orange and never turns green"
-    The camera can't read the memory card. Power off, remove and reinsert the card, and power on
-    again. If it continues (on Mono it turns to a slow red blink after a minute), try another card
-    and make sure it is formatted **exFAT** — see [Memory cards](../power-and-care/memory-cards.md).
-
 ??? question "The light blinks red slowly"
     The memory card is missing, not detected or was removed. Insert the card (or reseat it) and
-    power-cycle the camera.
+    power-cycle the camera. If it continues, try another card and make sure it is formatted
+    **exFAT** — see [Memory cards](../power-and-care/memory-cards.md).
 
 ??? question "The light stays white for a long time after power-on"
-    The camera is checking and repairing recordings from an earlier session — for example after power
-    was pulled mid-take. This can take a while on a large card. **Don't power off**; it turns green
-    when done.
+    White at start-up is normal: the camera is processing recordings from earlier sessions — for
+    example repairing a take after power was pulled mid-recording. This can take a while on a large
+    card. **Don't power off**; it turns green when done.
 
 ??? question "I pressed the button but it didn't start recording"
     - Wait for **green** — the button is ignored while the light is white.
