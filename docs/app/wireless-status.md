@@ -15,6 +15,15 @@ phones can follow any number of cameras.
     first) and a phone with Bluetooth LE. The app asks for the Bluetooth scan permission, which is
     never used for location.
 
+## See it in action
+
+Several cameras recording to their cards while the app follows them over Bluetooth (about 3 minutes).
+
+<figure class="drive-video-figure">
+  <iframe class="drive-video" src="https://drive.google.com/file/d/19mdQXlmRkHEGx4rpHxbxoyKXCQmTLcBf/preview" title="Trinet Wireless status demo" allow="autoplay; fullscreen" loading="lazy"></iframe>
+  <figcaption>Wireless status with several cameras. <a href="https://drive.google.com/file/d/19mdQXlmRkHEGx4rpHxbxoyKXCQmTLcBf/view" target="_blank" rel="noopener">Open in Google Drive ↗</a></figcaption>
+</figure>
+
 ## What you see
 
 - **Overview** — every kit and camera in range, grouped by kit and sorted by distance (Near,

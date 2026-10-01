@@ -178,3 +178,12 @@
 /* ---------- product photo */
 .md-typeset figure img { border-radius: var(--trinet-radius); }
 .md-typeset figcaption { color: var(--trinet-muted); font-size: .7rem; }
+
+/* ---------- embedded Drive videos (portrait phone recordings) */
+.md-typeset .drive-video-figure { margin: 1rem 0 1.5rem; }
+.md-typeset .drive-video {
+  display: block; width: 100%; max-width: 22rem; aspect-ratio: 9 / 16; border: 0;
+  border-radius: var(--trinet-radius); background: #000;
+}
+.md-typeset .drive-video-figure figcaption { text-align: left; max-width: 22rem; }
+.md-typeset video.sample-clip { width: 100%; border-radius: var(--trinet-radius); background: #000; }

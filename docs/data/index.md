@@ -50,6 +50,8 @@ into the same set of files, so every tool reads every recording the same way.
 
 ## Working with your data
 
+No camera yet? Download real recordings from the [sample data](sample-data.md) page.
+
 - [Python toolkit](../toolkit/index.md) — inspect, repair, visualize, export to MCAP / ROS 2.
 - [Calibration](../calibration/index.md) — intrinsics, camera–IMU extrinsics and time offset.
 - [File formats](file-formats.md) — layouts, versions and the full byte-level specifications.

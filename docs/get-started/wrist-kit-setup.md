@@ -5,6 +5,15 @@ description: Record with a Trinet Wrist Kit, pair cameras into a kit, add a came
 
 # Set up a Wrist Kit
 
+## Video guide
+
+How to put on and use the wrist cameras, start to finish (about 6½ minutes).
+
+<figure class="drive-video-figure">
+  <iframe class="drive-video" src="https://drive.google.com/file/d/1HTarOvD9ZrROfzMRWJyZuuNBqGUa-tdq/preview" title="How to use the Trinet wrist cameras" allow="autoplay; fullscreen" loading="lazy"></iframe>
+  <figcaption>Using the wrist cameras. <a href="https://drive.google.com/file/d/1HTarOvD9ZrROfzMRWJyZuuNBqGUa-tdq/view" target="_blank" rel="noopener">Open in Google Drive ↗</a></figcaption>
+</figure>
+
 ## Out of the box
 
 Wrist Kits are **paired at the factory**. Each camera needs a small removable radio-beacon adapter on

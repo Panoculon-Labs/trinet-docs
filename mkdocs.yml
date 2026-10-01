@@ -160,6 +160,7 @@ nav:
       - data/index.md
       - Timing and sync: data/sync.md
       - File formats: data/file-formats.md
+      - Sample data: data/sample-data.md
   - Python toolkit:
       - toolkit/index.md
       - Inspect and repair: toolkit/inspect-and-repair.md
