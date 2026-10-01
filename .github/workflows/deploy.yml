@@ -43,7 +43,7 @@ jobs:
             fi
             echo "::error::DISCLOSURE_REGEX secret is not set"; exit 1
           fi
-          if grep -rnP "$DISCLOSURE_REGEX" docs/ mkdocs.yml overrides/ hooks/ README.md; then
+          if grep -rnIP "$DISCLOSURE_REGEX" docs/ mkdocs.yml overrides/ hooks/ README.md; then
             echo "::error::Restricted terms found (see matches above)"; exit 1
           fi
 
