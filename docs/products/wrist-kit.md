@@ -13,13 +13,18 @@ frame by frame.
 <div class="photo-row" markdown>
 <figure markdown>
   ![Back of a Wrist Kit camera with the radio-beacon adapter attached](../assets/images/product/wrist-kit-beacon-attached.webp){ .product-shot loading=lazy }
-  <figcaption>Each kit camera carries a small radio-beacon adapter on the back.</figcaption>
+  <figcaption>Each kit camera needs a small radio-beacon adapter on the back (sold separately).</figcaption>
 </figure>
 <figure markdown>
   ![Camera back with the radio-beacon adapter removed](../assets/images/product/wrist-kit-beacon-removed.webp){ .product-shot loading=lazy }
   <figcaption>The adapter is removable — keep it attached for kit recording.</figcaption>
 </figure>
 </div>
+
+!!! info "Radio beacons are sold separately"
+    Every camera in a Wrist Kit needs a radio-beacon adapter attached — it carries the wireless sync
+    between cameras. Beacons are sold separately; [contact us](../support/index.md) to order. A camera
+    used on its own doesn't need one.
 
 ## How it works
 

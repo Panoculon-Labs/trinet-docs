@@ -7,8 +7,8 @@ description: Record with a Trinet Wrist Kit, pair cameras into a kit, add a came
 
 ## Out of the box
 
-Wrist Kits are **paired at the factory**. Each camera has a small removable radio-beacon adapter on
-the back — keep it attached; it's what keeps the cameras in sync.
+Wrist Kits are **paired at the factory**. Each camera needs a small removable radio-beacon adapter on
+the back (beacons are sold separately) — keep it attached; it's what keeps the cameras in sync.
 
 <div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/wrist-kit-beacon-attached.webp" alt="Radio-beacon adapter attached to the back of the camera" loading="lazy"><figcaption>Adapter attached — ready for kit use.</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/wrist-kit-beacon-removed.webp" alt="Radio-beacon adapter removed from the camera" loading="lazy"><figcaption>Adapter removed.</figcaption></figure></div>
 
