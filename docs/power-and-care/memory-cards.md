@@ -1,19 +1,33 @@
 ---
 title: Memory cards
-description: Which microSD cards to use with Trinet, how much each hour of recording needs, and how the camera handles full or removed cards.
+description: Recommended microSD cards for Trinet (V30 or higher), how much each hour of recording needs, and how the camera handles full or removed cards.
 ---
 
 # Memory cards
 
-## Choosing a card
+## Recommended cards
 
-- **Type:** microSD (SDHC/SDXC), a high-endurance or video-rated card (U3 / V30 or better).
-  Endurance cards cope best with hours of continuous writing.
-- **Format:** **exFAT**. FAT32 limits single files to 4 GB, which ends long takes early.
-- **Size:** 64 GB or more for Trinet Mono; 128 GB or more for Trinet Stereo and Stereo GS. Cards up to
-  256 GB are tested.
-- Use a genuine card from a known brand. Counterfeit cards report a false size and corrupt
-  recordings when they fill up.
+Use a microSD card that carries the **V30** video speed class mark (or higher: V60, V90). V30 means
+the card can sustain at least 30 MB/s of writing, far more than a Trinet camera needs — a stereo
+camera writes about 20 Mbit/s (2.5 MB/s) — so it keeps up through hours of continuous recording
+with margin for slow moments inside the card.
+
+| | Recommended |
+|---|---|
+| **Speed class** | **V30** or higher (usually also marked **U3**) — see the [SD Association's speed classes ↗](https://www.sdcard.org/developers/sd-standard-overview/speed-class/) |
+| **Type** | microSDXC (or microSDHC for 32 GB) from a well-known brand; **high-endurance** cards are the best choice for long, repeated recording sessions |
+| **Capacity** | 64 GB or more for Trinet Mono; 128 GB or more for Trinet Stereo and Stereo GS; cards up to 256 GB are tested |
+| **Format** | **exFAT** — FAT32 limits single files to 4 GB, which ends long takes early |
+
+**Avoid** cards with only a Class 10 or U1 mark, unbranded or very cheap cards, and cards bought from
+unknown sellers — counterfeit cards report a false size and corrupt recordings as they fill up.
+
+!!! warning "No guarantee or liability"
+    These are general recommendations to help you choose a card. Panoculon Labs does not test,
+    certify, endorse or guarantee any third-party memory card, and accepts no liability for loss or
+    corruption of recordings caused by a memory card. Card performance varies between models, batches
+    and sellers — test a new card with a short recording before an important session, and keep
+    copies of recordings you can't afford to lose.
 
 ## How much you can record
 

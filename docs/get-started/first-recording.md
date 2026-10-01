@@ -10,8 +10,8 @@ involved.
 
 <ol class="steps" markdown>
 
-<li markdown>**Insert a memory card.** Use an exFAT-formatted microSD card
-([which cards](../power-and-care/memory-cards.md)). Insert it before powering the camera.
+<li markdown>**Insert a memory card.** Use a **V30** microSD card formatted as exFAT
+([recommended cards](../power-and-care/memory-cards.md#recommended-cards)). Insert it before powering the camera.
 <div class="photo-row"><figure><img class="product-shot" src="../../assets/images/product/insert-sd-card.webp" alt="Inserting a microSD card into the camera" loading="lazy"><figcaption>Slide the card in, contacts first.</figcaption></figure><figure><img class="product-shot" src="../../assets/images/product/sd-card-inserted.webp" alt="microSD card fully inserted" loading="lazy"><figcaption>Fully inserted.</figcaption></figure></div>
 </li>
 
