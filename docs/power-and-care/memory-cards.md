@@ -10,7 +10,7 @@ description: Recommended microSD cards for Trinet (V30 or higher), how much each
 Use a microSD card that carries the **V30** video speed class mark (or higher: V60, V90). V30 means
 the card can sustain at least 30 MB/s of writing, far more than a Trinet camera needs — a stereo
 camera writes about 20 Mbit/s (2.5 MB/s) — so it keeps up through hours of continuous recording
-with margin for slow moments inside the card.
+with headroom for slow moments inside the card.
 
 | | Recommended |
 |---|---|
