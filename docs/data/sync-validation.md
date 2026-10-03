@@ -7,8 +7,6 @@ description: Validation of Trinet wireless camera-to-camera synchronization agai
 
 <p class="report-meta">Panoculon Labs · Measurements 26–28 August 2026 · Report version 1.0, October 2026</p>
 
-[:material-file-pdf-box: Download PDF](../assets/reports/trinet-sync-validation-2026-08.pdf){ .md-button }
-
 ## Summary
 
 Trinet cameras in a [Wrist Kit](../products/wrist-kit.md) have no cables between them; each keeps
@@ -47,12 +45,16 @@ instant with each camera's own frame timestamps gives the timestamp error of eve
 same physical event — without reference to any clock being tested, and without per-unit calibration
 inputs.
 
+![The LED reference as recorded by Trinet cameras: off, switching during the frame, and on](../assets/reports/sync-2026-08/fig0-led-reference.jpg)
+
+<p class="report-caption"><strong>Figure 1.</strong> The LED reference as recorded by Trinet cameras during the experiments — top: the strobe unit (26 August); bottom: close-ups from the main test (27–28 August). In the centre frames the LED switched while the frame was being read out, so only part of the light is captured; where that transition falls in the sensor rows locates the switching instant to a fraction of a row. Original camera frames, cropped but not retouched.</p>
+
 **Frame pairing.** For the one-hour test, frames from the two cameras were paired by their timestamps
 (precision about 8 µs) to measure frame-to-frame variation and long-term drift. Pairing measures
 variation and drift; the optical method measures the absolute offset.
 
 **Exclusions.** The first second of each recording, while a camera locks onto the shared clock, is
-excluded from the statistics and shown shaded in Figure 1.
+excluded from the statistics and shown shaded in Figure 2.
 
 ## 3. Results
 
@@ -60,7 +62,7 @@ excluded from the statistics and shown shaded in Figure 1.
 
 ![Per-frame timestamp offset between a wrist camera and the stereo head camera over four minutes](../assets/reports/sync-2026-08/fig1-per-frame-offset.svg)
 
-<p class="report-caption"><strong>Figure 1.</strong> Timestamp offset between a wrist camera and the
+<p class="report-caption"><strong>Figure 2.</strong> Timestamp offset between a wrist camera and the
 stereo head camera for light-matched frames over a four-minute recording (~7,000 frames, plotted at
 5 Hz). Median +56 µs, standard deviation 71 µs. Over 99% of plotted samples lie within 150 µs of zero.
 One brief radio-degraded episode, about 2 s long, reached −561 µs before the link recovered.</p>
@@ -69,7 +71,7 @@ One brief radio-degraded episode, about 2 s long, reached −561 µs before the 
 
 ![Mean camera-to-camera offset in 27 sessions, each after a full cold restart](../assets/reports/sync-2026-08/fig2-cold-restarts.svg)
 
-<p class="report-caption"><strong>Figure 2.</strong> Mean offset in each of 27 sessions (about four
+<p class="report-caption"><strong>Figure 3.</strong> Mean offset in each of 27 sessions (about four
 minutes each, six hours in total), with every device fully restarted before each session — the
 worst case for any state carried between recordings. Mean +49 ± 8 µs (standard error), standard
 deviation 43 µs, range −22 µs to +134 µs. The shaded band is ±1 standard deviation; no trend across
@@ -79,7 +81,7 @@ sessions.</p>
 
 ![Histogram of the left minus right eye timestamp difference per frame](../assets/reports/sync-2026-08/fig3-stereo-eyes.svg){ style="max-width:42rem" }
 
-<p class="report-caption"><strong>Figure 3.</strong> Per-frame timestamp difference between the two
+<p class="report-caption"><strong>Figure 4.</strong> Per-frame timestamp difference between the two
 eyes of the stereo head camera over a full recording (7,649 frames; logarithmic scale). Median
 0.0 µs, standard deviation 0.82 µs; 99.1% of frames within ±2 µs. Both eyes are triggered from a
 single line, so this also bounds the error of the timestamping chain itself at under a
@@ -89,7 +91,7 @@ microsecond.</p>
 
 ![Per-minute median deviation between two cameras over one continuous hour](../assets/reports/sync-2026-08/fig4-one-hour.svg)
 
-<p class="report-caption"><strong>Figure 4.</strong> Per-minute median deviation from the session
+<p class="report-caption"><strong>Figure 5.</strong> Per-minute median deviation from the session
 mean between two kit cameras over one continuous hour (107,107 frame pairs). Linear trend
 +0.3 ± 5.5 µs per hour; per-frame trend −1.0 ± 0.7 µs per hour. Over the same hour the cameras' raw
 clocks drifted apart by 14.4 ms; per-frame timestamp correction removes this to within about 1 µs.</p>
@@ -105,11 +107,11 @@ clocks drifted apart by 14.4 ms; per-frame timestamp correction removes this to 
 
 | Parameter | Typical value | Basis |
 |---|---|---|
-| Camera-to-camera offset | ≈ 50 µs | Figures 1 and 2 |
-| Session-to-session variation | ≈ 43 µs (1 SD) | Figure 2 |
+| Camera-to-camera offset | ≈ 50 µs | Figures 2 and 3 |
+| Session-to-session variation | ≈ 43 µs (1 SD) | Figure 3 |
 | Frame-to-frame deviation, 99th percentile | ≈ 230 µs | Section 3.4 |
-| Drift over one hour | Not measurable (≤ 1 µs) | Figure 4 |
-| Stereo left vs right eye | < 1 µs | Figure 3 |
+| Drift over one hour | Not measurable (≤ 1 µs) | Figure 5 |
+| Stereo left vs right eye | < 1 µs | Figure 4 |
 | **Product specification, camera to camera** | **Under 1 ms** | All of the above, with headroom |
 
 ## 5. Limitations
