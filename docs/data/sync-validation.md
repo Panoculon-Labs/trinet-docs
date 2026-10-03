@@ -54,7 +54,7 @@ Every frame carries a quality flag, and the rare radio-degraded frames (under 1%
 
 ## Good to know
 
-- Measurements were made on 27–28 August 2026 with production firmware, using a stereo head camera
+- Measurements were made on 27–28 August 2026 with production firmware, using a Trinet Stereo (rolling shutter) head camera
   and wrist cameras in a [Wrist Kit](../products/wrist-kit.md).
 - For the first one to two seconds of a take, a camera that is still locking on can be less accurate
   — see [Timing and sync](sync.md).
