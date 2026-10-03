@@ -163,8 +163,6 @@ all later frames are included, flagged or not. The largest steady-state deviatio
   used an earlier firmware build. Results in the field depend on the environment and radio
   conditions.
 
-## 6. Data availability
+## Related reading
 
-Methodology details and raw measurement data are available on request —
-[contact us](../support/index.md). Related reading: [Timing and sync](sync.md) ·
-[Wrist Kit](../products/wrist-kit.md) · [Sample data](sample-data.md).
+[Timing and sync](sync.md) · [Wrist Kit](../products/wrist-kit.md) · [Sample data](sample-data.md)

@@ -26,7 +26,7 @@ versions are listed [below](#earlier-versions).
 | Codec | H.264 (default) or H.265 for card recordings; live USB stream is H.264 |
 | Card bitrate | Variable, about 15 Mbps by default; adjustable in the [Trinet app](../app/camera-settings.md) |
 | Storage | About 7 GB per hour at default settings |
-| Lens | Ultra-wide fisheye; effective field of view about 139° horizontal × 73° vertical (from calibration) |
+| Lens | Ultra-wide fisheye; effective field of view 150° horizontal × 90° vertical |
 | Frame timing | Every frame timestamped at the middle of its exposure, on the camera clock |
 | Motion sensing | 3-axis accelerometer (±8 g), 3-axis gyroscope (±2000 °/s) at 400 Hz; 3-axis magnetometer at about 100 Hz |
 | Audio | Stereo microphones, AAC, 48 kHz by default (16, 44.1 or 48 kHz selectable); [hardware mute switch](../get-started/mute-switch.md) |
