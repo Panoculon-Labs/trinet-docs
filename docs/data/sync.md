@@ -11,7 +11,7 @@ description: How Trinet aligns motion data and video to sub-millisecond accuracy
 |---|---|
 | Motion data to video, within one camera | **Sub-millisecond**, hardware-timestamped |
 | Frame timestamp precision (jitter) | About 10 µs |
-| Camera to camera in a [Wrist Kit](../products/wrist-kit.md) | **Under 1 ms** |
+| Camera to camera in a [Wrist Kit](../products/wrist-kit.md) | **Under 1 ms** (measured: typically about 50 µs — [validation report](sync-validation.md)) |
 
 ## Within one camera
 

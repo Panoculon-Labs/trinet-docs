@@ -68,7 +68,7 @@ stops unexpectedly. The app only listens; it never connects to or controls the c
 | Measure | Typical |
 |---|---|
 | Motion data to video, within one camera | Sub-millisecond |
-| Camera to camera within a kit | Under 1 ms |
+| Camera to camera within a kit | Under 1 ms (measured: typically about 50 µs — [validation report](../data/sync-validation.md)) |
 
 For the first one to two seconds after a take starts, cameras that are still locking on can be less
 accurate; trim the first seconds if you need the tightest alignment. More in

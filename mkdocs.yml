@@ -160,6 +160,7 @@ nav:
   - Your data:
       - data/index.md
       - Timing and sync: data/sync.md
+      - Sync validation report: data/sync-validation.md
       - File formats: data/file-formats.md
       - Sample data: data/sample-data.md
   - Python toolkit:

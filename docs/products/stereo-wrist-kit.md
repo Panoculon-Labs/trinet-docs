@@ -47,7 +47,7 @@ are paired at the factory; more cameras can join the same kit. See [Wrist Kit](w
 | Motion data to video, within each camera | **Sub-millisecond**, hardware-timestamped |
 | Frame timestamp precision (jitter) | About 10 µs |
 | Head stereo, left eye to right eye | Both eyes triggered from a single clock |
-| Camera to camera within the kit | **Under 1 ms** |
+| Camera to camera within the kit | **Under 1 ms** — measured typically about 50 µs ([validation report](../data/sync-validation.md)) |
 
 - Frames are timestamped at **mid-exposure**; motion samples at the moment they're measured — all on
   the camera clock, and across the kit on the shared kit clock.
