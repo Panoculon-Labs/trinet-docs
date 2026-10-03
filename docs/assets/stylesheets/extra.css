@@ -187,3 +187,11 @@
 }
 .md-typeset .drive-video-figure figcaption { text-align: left; max-width: 22rem; }
 .md-typeset video.sample-clip { width: 100%; border-radius: var(--trinet-radius); background: #000; }
+
+/* ---------- validation report */
+.md-typeset .report-meta { color: var(--trinet-muted); font-size: .72rem; margin-top: -.6rem; }
+.md-typeset .report-caption { color: var(--trinet-muted); font-size: .7rem; line-height: 1.5; margin-top: -.4rem; }
+.md-typeset img[src*="reports/sync-2026-08"] {
+  display: block; width: 100%; background: #fff; border: 1px solid var(--trinet-card-border);
+  border-radius: var(--trinet-radius); padding: .6rem; box-sizing: border-box;
+}
