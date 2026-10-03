@@ -52,7 +52,7 @@ description: Frequently asked questions about Trinet cameras — recording lengt
 ## Timing and sync
 
 ??? question "How accurate is the sync?"
-    Motion data to video: sub-millisecond, hardware-timestamped. Camera to camera in a Wrist Kit: about
+    Motion data to video: sub-millisecond, hardware-timestamped. Camera to camera in a Wrist Kit: under
     1 ms. See [Timing and sync](../data/sync.md).
 
 ??? question "Can Trinet sync to an external clock, timecode or trigger?"

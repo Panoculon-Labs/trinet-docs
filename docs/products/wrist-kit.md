@@ -35,7 +35,7 @@ frame by frame.
 - **Factory-paired.** A kit arrives already paired: power the cameras on and they find each other.
 - **One button starts the whole kit.** Press the button on any camera and every camera in the kit
   starts (or stops) recording together.
-- **One timeline.** Cameras keep their clocks aligned to about 1 millisecond of each other while
+- **One timeline.** Cameras keep their clocks aligned to within 1 millisecond of each other while
   recording. Each camera records to its own memory card.
 - **Robust to dropouts.** If the radio link drops mid-take, every camera keeps recording on its own
   and re-aligns when the link returns. Nothing is lost.
@@ -68,7 +68,7 @@ stops unexpectedly. The app only listens; it never connects to or controls the c
 | Measure | Typical |
 |---|---|
 | Motion data to video, within one camera | Sub-millisecond |
-| Camera to camera within a kit | About 1 ms |
+| Camera to camera within a kit | Under 1 ms |
 
 For the first one to two seconds after a take starts, cameras that are still locking on can be less
 accurate; trim the first seconds if you need the tightest alignment. More in

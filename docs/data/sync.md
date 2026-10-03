@@ -11,7 +11,7 @@ description: How Trinet aligns motion data and video to sub-millisecond accuracy
 |---|---|
 | Motion data to video, within one camera | **Sub-millisecond**, hardware-timestamped |
 | Frame timestamp precision (jitter) | About 10 µs |
-| Camera to camera in a [Wrist Kit](../products/wrist-kit.md) | **About 1 ms** |
+| Camera to camera in a [Wrist Kit](../products/wrist-kit.md) | **Under 1 ms** |
 
 ## Within one camera
 
@@ -62,7 +62,7 @@ Cameras in a kit share a clock over a short-range radio link:
 - Every frame's timestamp can be placed on the kit's **shared timeline** — the per-frame offset is
   recorded in the timestamp file — so frames from different cameras line up directly, not by frame
   index.
-- While recording, cameras stay within about **1 ms** of each other.
+- While recording, cameras stay within **1 ms** of each other.
 - For the first one to two seconds after a take starts, a camera that is still locking on can be less
   accurate. Trim the first seconds when you need the tightest alignment.
 - If the radio link drops, each camera keeps recording and carries its timing forward; it re-aligns
@@ -77,4 +77,4 @@ the toolkit's [wireless UTC tool](../toolkit/wireless-utc.md).
 ## Quoting accuracy
 
 When describing Trinet timing to others, the accurate summary is: **sub-millisecond,
-hardware-timestamped motion–video alignment, and about 1 ms between cameras in a kit.**
+hardware-timestamped motion–video alignment, and under 1 ms between cameras in a kit.**

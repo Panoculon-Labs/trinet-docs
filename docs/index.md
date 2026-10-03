@@ -128,7 +128,7 @@ Not sure which one you have? See [Which camera do I have?](products/which-camera
 - **One clock for everything.** Every video frame, motion sample and audio sample is timestamped
   on the same camera clock, so motion data lines up with video to well under a millisecond.
 - **Cameras that agree with each other.** Cameras in a Wrist Kit share a wireless clock and stay
-  within about a millisecond of each other.
+  within a millisecond of each other.
 - **Self-describing recordings.** Each recording carries the camera's identity and calibration,
   in open, documented file formats.
 - **Works standalone or tethered.** Record to a memory card with one button, or stream over USB
