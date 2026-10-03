@@ -45,9 +45,9 @@ instant with each camera's own frame timestamps gives the timestamp error of eve
 same physical event — without reference to any clock being tested, and without per-unit calibration
 inputs.
 
-![The LED reference as recorded by Trinet cameras: off, switching during the frame, and on](../assets/reports/sync-2026-08/fig0-led-reference.jpg)
+![The LED reference as recorded by Trinet cameras: off, switching during the frame, and on](../assets/reports/sync-2026-08/fig1-led-photos.jpg)
 
-<p class="report-caption"><strong>Figure 1.</strong> The LED reference as recorded by Trinet cameras during the experiments — top: the strobe unit (26 August); bottom: close-ups from the main test (27–28 August). In the centre frames the LED switched while the frame was being read out, so only part of the light is captured; where that transition falls in the sensor rows locates the switching instant to a fraction of a row. Original camera frames, cropped but not retouched.</p>
+<p class="report-caption"><strong>Figure 1.</strong> The LED reference as recorded by Trinet cameras during the experiments — top: the strobe unit; bottom: close-ups of the LED. In the centre frames the LED switched while the frame was being read out, so only part of the light is captured; where that transition falls in the sensor rows locates the switching instant to a fraction of a row. Original camera frames, cropped but not retouched.</p>
 
 **Frame pairing.** For the one-hour test, frames from the two cameras were paired by their timestamps
 (precision about 8 µs) to measure frame-to-frame variation and long-term drift. Pairing measures
