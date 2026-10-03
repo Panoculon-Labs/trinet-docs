@@ -59,7 +59,8 @@ The `.mp4` carries:
 
 - the video (H.264 or H.265) and, on cameras with microphones, an AAC audio track;
 - an **embedded metadata track** with the device ID, firmware and camera generation, calibration,
-  and the motion and timing data — so a clip remains usable on its own.
+  and the motion and timing data — so a clip remains usable on its own. Full description:
+  [Metadata format (TMF)](metadata.md).
 
 Streams sent over USB also carry the motion data inside the video, one packet per frame; the app, SDK
 and toolkit turn it back into `.imu` and `.vts` files.
