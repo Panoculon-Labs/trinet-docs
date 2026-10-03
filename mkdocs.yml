@@ -128,6 +128,7 @@ nav:
       - Trinet Stereo: products/stereo.md
       - Trinet Stereo GS: products/stereo-gs.md
       - Trinet Wrist Kit: products/wrist-kit.md
+      - "Spec note: Stereo + Wrist Kit": products/stereo-wrist-kit.md
       - Which camera do I have?: products/which-camera.md
   - Get started:
       - get-started/index.md

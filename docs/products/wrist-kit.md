@@ -26,6 +26,10 @@ frame by frame.
     between cameras. Beacons are sold separately; [contact us](../support/index.md) to order. A camera
     used on its own doesn't need one.
 
+!!! tip "Spec sheet"
+    Collecting with a stereo head camera and two wrist cameras? See the one-page
+    [Stereo + Wrist Kit spec note](stereo-wrist-kit.md).
+
 ## How it works
 
 - **Factory-paired.** A kit arrives already paired: power the cameras on and they find each other.
