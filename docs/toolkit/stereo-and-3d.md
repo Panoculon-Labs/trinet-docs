@@ -17,6 +17,10 @@ python3 scripts/stereo_depth_video.py captures/take0002 out_depth.mp4 --wls --im
 Renders the rectified left and right images with a metric depth map (semi-global block matching;
 `--wls` smoothing needs `opencv-contrib-python`), optionally with a motion strip.
 
+It also prints the measured vertical offset between the eyes. To check whether a camera's
+calibration still fits, use the dedicated
+[field check](../calibration/use-a-calibration.md#check-your-calibration-in-the-field).
+
 ## Motion HUD
 
 ```bash

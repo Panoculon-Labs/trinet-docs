@@ -40,6 +40,43 @@ python3 tools/to_kalibr_yaml.py mono/V4/trinet_pro_mono_V4_batch_calibration.jso
     --cam-topics /cam0/image_raw --imu-topic /imu0
 ```
 
+## Check your calibration in the field
+
+A stereo camera's calibration describes its two lenses as they were when it was calibrated. Knocks,
+handling or a lens being touched can move them slightly; the usual symptom is a small vertical offset
+between the two eyes, which degrades depth and stereo tracking. The
+[Python toolkit](../toolkit/index.md) can measure that offset from an ordinary recording — **no
+calibration target needed**.
+
+1. Record a few seconds of a **well-lit, textured scene** 1–5 m away — a desk, shelves, a room. Avoid
+   blank walls, the sky and dark scenes.
+2. Run the check on the take (the calibration embedded in the recording is used; add
+   `--calibration calibration.json` to check a calibration file instead):
+
+    ```bash
+    python3 scripts/check_calibration.py card/Trinet/recording/take0002
+    ```
+
+3. Read the result:
+
+    ```text
+    sampled:     15 frame pairs, 6826 tracked points
+    offset:      +0.69 px vertical between the eyes (spread across the take 0.18 px)
+    OK — the calibration fits (|offset| <= 1.5 px).
+    ```
+
+| Verdict | Vertical offset | What to do |
+|---|---|---|
+| **OK** | up to 1.5 px | Nothing — the calibration fits. Healthy cameras typically read 0.5–1 px. |
+| **CHECK** | 1.5 – 3 px | Re-run on another well-lit, textured take. If it stays in this range, plan a recalibration. |
+| **RECALIBRATE** | above 3 px | The stereo mount has moved since calibration; depth from this camera is degraded until it is recalibrated — [contact us](../support/index.md). |
+| **INCONCLUSIVE** | — | Too few features to measure — record a more textured, better-lit scene. |
+
+The command exits with 0 (OK), 1 (CHECK), 2 (RECALIBRATE) or 3 (INCONCLUSIVE), and `--json` prints
+the result for scripts — handy for checking every camera after a shoot. The check detects vertical
+misalignment between the eyes, the most common way a stereo calibration drifts; it does not measure
+a change of focal length.
+
 ## Undistort (mono) or rectify (stereo) with OpenCV
 
 Needs `numpy` and `opencv-python`:
