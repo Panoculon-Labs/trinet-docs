@@ -63,7 +63,7 @@ Method and details: [Timing and sync](../data/sync.md).
 |---|---|---|---|
 | Sensors | 2 × 3 MP rolling shutter | 2 × 2.3 MP **global shutter** | 1, rolling shutter |
 | Video | 1920×1080 per eye, 30 fps | 1920×1080 per eye, 30 fps | 1920×1080, 30 fps |
-| Effective field of view | ≈158° H × 94° V per eye (from calibration) | ≈160° H × 96° V per eye (from calibration) | 150° H × 90° V |
+| Effective field of view | ≈158° H × 94° V per eye (from calibration) | ≈180° H × 96° V per eye (from calibration) | 150° H × 90° V |
 | Codec on card | H.264 (default) or H.265 | H.264 (default) or H.265 | H.264 (default) or H.265 |
 | Card bitrate | 10 Mbps constant, per eye | 10 Mbps constant, per eye | ≈15 Mbps variable (adjustable) |
 | Frame timing | Mid-exposure of the centre row; per-frame readout time | Whole frame at once | Mid-exposure |
