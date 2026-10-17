@@ -174,6 +174,7 @@ nav:
       - Stereo and 3D: toolkit/stereo-and-3d.md
   - Calibration:
       - calibration/index.md
+      - Get your camera's calibration: calibration/get-calibration.md
       - Reference calibrations: calibration/reference-calibrations.md
       - Use a calibration: calibration/use-a-calibration.md
   - Build apps:

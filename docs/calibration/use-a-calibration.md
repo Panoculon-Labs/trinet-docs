@@ -5,6 +5,9 @@ description: Conventions of Trinet calibrations, exporting to Kalibr / OpenVINS 
 
 # Use a calibration
 
+To get your own camera's calibration as `calibration.json` first, see
+[Get your camera's calibration](get-calibration.md).
+
 ## Conventions
 
 - **Camera model:** pinhole projection with **equidistant (Kannala-Brandt) fisheye distortion**,

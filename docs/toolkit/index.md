@@ -62,6 +62,7 @@ the repository and undistorts a frame.
 - [:material-clock-outline: **Put recordings on UTC**](wireless-utc.md) — using the app's wireless log
 - [:material-package-variant: **Ingest SD cards**](ingest.md) — upload-ready deliveries with metadata
 - [:material-cube-outline: **Stereo and 3D**](stereo-and-3d.md) — depth, motion HUD, VIO
+- [:material-target: **Get your camera's calibration**](../calibration/get-calibration.md) — from an MP4, over USB or NCM
 
 </div>
 

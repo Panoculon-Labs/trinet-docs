@@ -20,12 +20,15 @@ measurements — for undistortion, stereo depth and visual-inertial odometry.
 ## Where to find a unit's calibration
 
 - **In every recording.** Recordings carry the camera's stored calibration inside the video file,
-  so a clip is usable for undistortion even on its own. The [toolkit](../toolkit/inspect-and-repair.md)
-  reads it.
-- **From the camera.** The [Trinet app](../app/camera-settings.md#advanced) can read the stored
-  calibration (*Calibration → Read*), and apps can use the SDK's `getCalibration`.
+  so a clip is usable for undistortion even on its own.
+- **From the camera.** You can read it over USB in webcam mode or, on Trinet Mono, over USB
+  networking in iPhone mode. The [Trinet app](../app/camera-settings.md#advanced) can also read the
+  stored calibration (*Calibration → Read*), and apps can use the SDK's `getCalibrationAny`.
 - **As a file.** Where we hold your units' calibrations as files, they use the same JSON format as the
   reference calibrations, keyed by device ID.
+
+**[Get your camera's calibration](get-calibration.md)** shows how to save it as
+`calibration.json` with one command, by any of these methods.
 
 Cameras can also store a calibration you provide: *Calibration → Upload from file* in the app, with
 *Lock calibration* to prevent it being overwritten.
