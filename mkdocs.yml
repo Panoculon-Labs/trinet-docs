@@ -162,6 +162,7 @@ nav:
       - Timing and sync: data/sync.md
       - Sync validation report: data/sync-validation.md
       - File formats: data/file-formats.md
+      - Motion data axes: data/imu-axes.md
       - Metadata format (TMF): data/metadata.md
       - Sample data: data/sample-data.md
   - Python toolkit:

@@ -15,6 +15,7 @@ To get your own camera's calibration as `calibration.json` first, see
 - **Camera frame:** x right, y down, z forward (along the optical axis).
 - **`T_cam_imu` / `T_cam0_imu`:** 4×4 transform mapping a point from the IMU frame into the camera
   frame, `p_cam = T_cam_imu · p_imu`. Its translation column is the IMU origin in the camera frame.
+  The IMU's axes differ by camera model; see [Motion data axes](../data/imu-axes.md).
 - **`T_cam1_cam0`:** maps a point from the left eye (cam0) into the right eye (cam1). Its translation is
   about (−0.070, 0, 0) m: the right eye sits 70 mm to the right.
 - **Stereo eyes:** cam0 = the wearer's **left** eye = the left half of a side-by-side frame

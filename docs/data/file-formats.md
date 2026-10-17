@@ -31,7 +31,8 @@ A 64-byte header followed by one fixed-size record per motion sample.
 
 Each sample holds its **timestamp** (nanoseconds, camera clock), **acceleration** (m/s², gravity
 included), **angular rate** (rad/s), **magnetic field** (µT, on cameras with a live magnetometer),
-**sensor temperature**, and the age of the magnetometer reading.
+**sensor temperature**, and the age of the magnetometer reading. Axes are the motion sensor's own,
+which differ by camera model: see [Motion data axes](imu-axes.md).
 
 | Version | Cameras | What changed |
 |---|---|---|
