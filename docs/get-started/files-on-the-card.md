@@ -49,7 +49,7 @@ Left and right are as seen by the wearer.
 
 ### Split recordings
 
-If the camera is set to [split recordings](../app/camera-settings.md) — also called **chunking** —
+If the camera is set to [split recordings](../app/camera-settings.md#set-split-recordings-chunking) — also called **chunking** —
 either at the factory or from the app, a long session is saved as a series of numbered takes of that
 length rather than one very large file:
 

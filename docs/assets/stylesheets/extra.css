@@ -170,6 +170,9 @@
   box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
 }
 .md-typeset .photo-row:has(img.app-shot) { grid-template-columns: repeat(auto-fill, minmax(11rem, 13rem)); max-width: none; }
+/* A single settings card cropped out of a screen: shown wider so its text stays readable. */
+.md-typeset img.app-shot.card { max-width: 22rem; border-radius: 14px; }
+.md-typeset .photo-row:has(img.app-shot.card) { grid-template-columns: minmax(0, 22rem); }
 .md-typeset .product-hero { float: right; width: 15rem; margin: 0 0 1rem 1.2rem; }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .product-hero { float: none; width: 70%; margin: 0 auto 1rem; }
