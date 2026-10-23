@@ -58,6 +58,7 @@ the repository and undistorts a frame.
 
 - [:material-magnify: **Inspect and repair**](inspect-and-repair.md) — read, check and fix recordings
 - [:material-chart-line: **Visualize and check sync**](visualize.md) — motion plots over video, kits side by side
+- [:material-watch: **View a kit take in sync**](kit-takes.md) — match takes across cards by `grp` number, head + wrists side by side
 - [:material-database-export: **Export to MCAP / ROS 2**](mcap.md) — one file for Foxglove and ROS 2
 - [:material-clock-outline: **Put recordings on UTC**](wireless-utc.md) — using the app's wireless log
 - [:material-package-variant: **Ingest SD cards**](ingest.md) — upload-ready deliveries with metadata

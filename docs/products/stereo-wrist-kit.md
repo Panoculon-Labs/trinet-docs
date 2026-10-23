@@ -88,13 +88,16 @@ See [Memory cards](../power-and-care/memory-cards.md) and
 
 ## Outputs
 
-Each camera writes its own files; takes recorded together share a kit prefix (`grp…`) so matching
-files group easily.
+Each camera writes its own files; takes recorded together share a take number (`grp<number>`) so
+matching files group easily. The device tag after it says which camera wrote the file.
 
-| Camera | Files per take |
+| Camera | Files per take (example) |
 |---|---|
-| Head (stereo) | `_L.mp4`, `_R.mp4` (video + audio + calibration), `_L.vts`, `_R.vts` (frame timestamps), `.imu` (motion) |
-| Each wrist | `.mp4` (video + audio + calibration), `.vts`, `.imu` |
+| Head (stereo) | `grp143024_cae8dabe_take0001_L.mp4`, `_R.mp4` (video + audio + calibration), `_L.vts`, `_R.vts` (frame timestamps), `.imu` (motion) |
+| Each wrist | `grp143024_23890f5f_1.mp4` (video + audio + calibration), `.vts`, `.imu`, `.json` (take, kit and role) |
+
+To match takes across the three cards and play them side by side, see
+[View a kit take in sync](../toolkit/kit-takes.md).
 
 The [Python toolkit](../toolkit/index.md) reads every file, plays kit takes side by side, checks sync,
 exports to [MCAP / ROS 2](../toolkit/mcap.md) and places every take on

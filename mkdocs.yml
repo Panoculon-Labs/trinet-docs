@@ -169,6 +169,7 @@ nav:
       - toolkit/index.md
       - Inspect and repair: toolkit/inspect-and-repair.md
       - Visualize and check sync: toolkit/visualize.md
+      - View a kit take in sync: toolkit/kit-takes.md
       - Export to MCAP / ROS 2: toolkit/mcap.md
       - Put recordings on UTC: toolkit/wireless-utc.md
       - Ingest SD cards: toolkit/ingest.md
