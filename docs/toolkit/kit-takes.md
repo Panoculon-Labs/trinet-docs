@@ -149,9 +149,26 @@ pass the matching part number from each wrist.
     camera writes no `.json`, so `--auto` would leave the head out. For a kit with a stereo head, list
     the files as above.
 
-## Check the sync
+## Check the take
 
-`sync_view.py` prints a line per camera before it renders:
+`check_recording.py` checks every camera of a take in one go — frame drops, frame rate, duration,
+bitrate, motion data, and whether every camera was synced and how closely its frames line up with
+the kit's master camera:
+
+```bash
+python scripts/check_recording.py my-session/head my-session/left my-session/right --take grp143024
+```
+
+Leave out `--take` to check every take in the folders. What each figure means:
+[Check a recording or kit take](visualize.md#check-a-recording-or-kit-take).
+
+!!! note "Kit takes record at about 29.7 fps — on purpose"
+    In a kit, every camera records at the same, slightly lower frame rate — about **29.7 fps**
+    (a frame every 33.7 ms instead of 33.3 ms) — so each camera can hold its frames in step with the
+    kit's master camera. This is intentional and the same on every camera of the kit. A camera
+    recording on its own runs at 30 fps.
+
+`sync_view.py` also prints a line per camera before it renders:
 
 - **synced, self-reported ~N µs** — the camera was locked to the kit's clock; typical values are
   tens of microseconds.

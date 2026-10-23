@@ -1,6 +1,6 @@
 ---
 title: Visualize and check sync
-description: Render Trinet recordings with motion plots, play kit cameras side by side on one timeline, and verify motion–video alignment.
+description: Check Trinet recordings and kit takes for frame drops, frame rate and sync, render them with motion plots, and play kit cameras side by side on one timeline.
 ---
 
 # Visualize and check sync
@@ -15,6 +15,51 @@ python scripts/visualize.py path/to/recording1_1.mp4
 Renders the video with live plots of the motion data underneath. Choose plots with `--plots` (for
 example `orientation,accel,gyro`), a time range with `--start` / `--end`, and the plot window with
 `--window`.
+
+## Check a recording or kit take { #check-a-recording-or-kit-take }
+
+`check_recording.py` prints a quality report for a single recording, a stereo take or a whole
+[Wrist Kit](../products/wrist-kit.md) take:
+
+```bash
+# one recording (for a stereo camera, either eye — both are checked)
+python scripts/check_recording.py path/to/recording1_1.mp4
+
+# a kit: one folder per camera; takes are matched by their grp number
+python scripts/check_recording.py my-session/head my-session/left my-session/right
+
+# one take only, and the full report as JSON
+python scripts/check_recording.py my-session/head my-session/left my-session/right \
+    --take grp143024 --json report.json
+```
+
+For each video stream (each eye of a stereo camera):
+
+| Figure | Means |
+|---|---|
+| Frames, dropped | Frames recorded, in the `.vts` and in the `.mp4`; frames missing inside the take. Timestamp steps in the first second of a kit take, while the camera joins the kit's clock, are listed separately as *start-up* and are not losses. |
+| fps | Measured from the frame timestamps — 30 for a camera on its own, about 29.7 in a kit (see below) |
+| Duration | First to last frame, and the `.mp4`'s own length |
+| Bitrate, codec, audio | From the `.mp4` (needs `ffprobe`) |
+| Data embedded in mp4 | Whether the motion data and timestamps are also inside the `.mp4` ([TMF](../data/metadata.md)) |
+| Motion | `.imu` samples, rate and longest gap |
+
+For a kit take it adds, per camera:
+
+| Figure | Means |
+|---|---|
+| Synced | The camera's timestamps are on the kit's shared clock |
+| Frame alignment | How far apart each frame was captured from the matching frame of the kit's master camera — median, 95th percentile and maximum, leaving out the first 2 seconds (`--skip`). Typically well under 1 ms. A larger value means frames were captured at slightly different instants; their timestamps still say exactly when, so data still lines up by time. |
+| Left / right eyes | The same, between the two eyes of a stereo camera |
+
+The report ends with **OK** or a list of **WARN** / **FAIL** lines, and the script exits with status
+1 if anything was flagged, so it can gate a batch.
+
+!!! note "Kit takes record at about 29.7 fps — on purpose"
+    In a kit, every camera records at the same, slightly lower frame rate — about **29.7 fps**
+    (a frame every 33.7 ms instead of 33.3 ms) — so each camera can hold its frames in step with the
+    kit's master camera. This is intentional and the same on every camera of the kit. A camera
+    recording on its own runs at 30 fps.
 
 ## Several cameras on one timeline
 
