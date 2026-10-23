@@ -22,12 +22,55 @@ with headroom for slow moments inside the card.
 **Avoid** cards with only a Class 10 or U1 mark, unbranded or very cheap cards, and cards bought from
 unknown sellers — counterfeit cards report a false size and corrupt recordings as they fill up.
 
+!!! question "A 10 MB/s card is four times what the camera needs. Why isn't it enough?"
+    Because recording doesn't fail on the **average** rate — it fails on the **longest pause**. A
+    Class 10, U1 or V10 mark means the card managed at least 10 MB/s *sequentially, in good
+    condition, with free space to write into*. It promises nothing about how long the card may stop
+    to reorganise itself inside.
+
+    That matters because the card is never told which space you freed. Deleting files updates your
+    computer's index, not the card's, so after a few cycles of filling and emptying it behaves as
+    though it were permanently full and has to shuffle data around before each new write. A card
+    with lots of spare speed does that in the gaps between writes and you never notice. A card with
+    barely any margin does it *instead of* writing, and stops for seconds at a time.
+
+    One we measured — a cheap card nominally good for four times what a stereo camera needs — had
+    settled at **2.8 MB/s average with pauses of up to 36 seconds** after repeated use. The camera
+    can ride out a short pause; 36 seconds costs you every frame in it. V30 or better is the
+    recommendation because the margin is what keeps the pauses short, not because 30 MB/s is needed.
+
 !!! warning "No guarantee or liability"
     These are general recommendations to help you choose a card. Panoculon Labs does not test,
     certify, endorse or guarantee any third-party memory card, and accepts no liability for loss or
     corruption of recordings caused by a memory card. Card performance varies between models, batches
     and sellers — test a new card with a short recording before an important session, and keep
     copies of recordings you can't afford to lose.
+
+## If a recording has gaps
+
+A card that is too slow, worn out or counterfeit shows itself in a very particular way: **the video
+has gaps while the motion data is complete**. The camera keeps sampling motion at full rate — that
+is a tiny trickle of data the slowest card can absorb — but video needs about 2.5 MB/s without
+pause, and when the card stops accepting writes for a few seconds the frames with nowhere to go are
+lost. You may also see a lower bitrate than you chose, and audio running on past the end of the
+video.
+
+If you see this:
+
+1. **Try a different card** — ideally a **V30** or better one, in the same camera, same settings.
+   This is the quickest way to tell a card problem from a camera problem.
+2. **Reformat the card** rather than deleting files. Deleting marks the space free for your computer,
+   but the card itself is not told, so it keeps working as though it were still full and gets slower
+   the more times you fill and empty it. A full format (the
+   [SD Memory Card Formatter ↗](https://www.sdcard.org/downloads/formatter/) is made for this) gives
+   the card its free space back and often restores its speed.
+3. **Retire the card** if the gaps come back after a reformat.
+
+!!! warning "A card can pass a read test and still ruin a recording"
+    Copying files off a card quickly tells you nothing about whether it can *write* fast enough. A
+    card we measured read at 41 MB/s and wrote at 2.8 MB/s on average — but it paused for up to
+    **36 seconds** at a time, which is what actually costs you frames. If you want to check a card,
+    write several gigabytes to it and watch for pauses, rather than timing a copy *from* it.
 
 ## How much you can record
 

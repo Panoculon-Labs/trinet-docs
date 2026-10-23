@@ -47,6 +47,25 @@ Trinet/recording/
 
 Left and right are as seen by the wearer.
 
+### Split recordings
+
+If the camera is set to [split recordings](../app/camera-settings.md) — at the factory or from the
+app — a long session is saved as a series of numbered takes of that length rather than one very
+large file:
+
+```text
+Trinet/recording/
+├── take0001_L.mp4    first 30 minutes
+├── take0001_R.mp4
+├── take0002_L.mp4    next 30 minutes
+└── …
+```
+
+Each take is complete and plays on its own, with its own motion and timing files. Between takes the
+camera pauses for **10–20 seconds** to finish writing the one before — the light stays on, nothing
+is recorded during the pause, and the next take starts by itself. The take numbers run on, so the
+order is the order they were recorded in.
+
 ## Kit recordings
 
 Takes recorded in a [Wrist Kit](../products/wrist-kit.md) start with a shared kit prefix,

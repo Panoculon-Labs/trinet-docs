@@ -8,6 +8,19 @@ description: What's new in every Trinet camera firmware release, from 0.2.0 to t
 Newest first. Products: **Mono** = Trinet Mono, **Stereo** = Trinet Stereo, **Stereo GS** = Trinet
 Stereo GS. To update, see [Update the firmware](index.md).
 
+## 0.5.13 — 21 October 2026 { #0513 }
+<span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
+
+- **Split recordings are clean.** A long recording can be split into takes of a set length. Each
+  take now starts and ends cleanly, with none of the frozen video that could appear a few seconds
+  into a take in earlier firmware. There is a **pause of 10–20 seconds between takes** while the
+  camera finishes writing the one before: the light stays on, and the camera starts the next take by
+  itself.
+- **The app shows the split length the camera is actually using.** A camera set up at the factory to
+  split its recordings used to report "off" until you chose a length yourself. It now reports the
+  length it will use.
+- Audio and video stay in step across a split, and each take plays on its own.
+
 ## 0.5.9 — 28 September 2026 { #059 }
 <span class="trinet-badge">Mono</span> <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
 
