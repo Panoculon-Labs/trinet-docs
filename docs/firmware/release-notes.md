@@ -11,7 +11,8 @@ Stereo GS. To update, see [Update the firmware](index.md).
 ## 0.5.13 — 21 October 2026 { #0513 }
 <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
 
-- **Split recordings are clean.** A long recording can be split into takes of a set length. Each
+- **Split recordings are clean.** A long recording can be split — chunked — into takes of a set
+  length. Each
   take now starts and ends cleanly, with none of the frozen video that could appear a few seconds
   into a take in earlier firmware. There is a **pause of 10–20 seconds between takes** while the
   camera finishes writing the one before: the light stays on, and the camera starts the next take by

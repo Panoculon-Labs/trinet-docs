@@ -25,7 +25,7 @@ On cameras with microphones: mute, automatic gain, gain level and sample rate (1
 | **Bitrate** | 1–20 Mbps (0.5 Mbps steps), with constant (CBR) or variable (AVBR) rate control. The camera restarts to apply it. Stereo card recordings always use 10 Mbps per eye. |
 | **Recording codec** | **H.264** or **H.265** for recordings the camera writes to its own card. Applies from the next take, no restart. The live USB stream is always H.264. Needs camera firmware 0.5.7 or newer on stereo cameras (0.5.9 on Mono). |
 | **Exposure range** | Minimum and maximum exposure time. |
-| **Split recordings** | Off, or a length from 5 to 240 minutes. A long recording is saved as a series of takes of that length instead of one very large file, so a problem costs you one take rather than everything. Applies from the next recording, no restart. Expect a pause of 10–20 seconds between takes. |
+| **Split recordings** | Off, or a length from 5 to 240 minutes — also called **chunking**, and set at the factory as a recording slice on cameras ordered that way. A long recording is saved as a series of takes of that length instead of one very large file, so a problem costs you one take rather than everything. Applies from the next recording, no restart. Expect a pause of 10–20 seconds between takes. |
 | **Location** | Mains frequency, 50 or 60 Hz, to avoid flicker under artificial light. Choose your country's mains frequency. |
 
 !!! tip "H.264 or H.265?"
