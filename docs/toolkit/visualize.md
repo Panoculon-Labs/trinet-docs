@@ -22,10 +22,14 @@ For a [Wrist Kit](../products/wrist-kit.md) take, `sync_view.py` renders every c
 with each frame placed on the kit's shared clock — the same instant lines up across panels, and the
 header shows the live camera-to-camera offset.
 
+!!! tip "Just recorded with a kit?"
+    [View a kit take in sync](kit-takes.md) walks through it from the memory cards: matching takes by
+    their `grp` number, telling cameras apart, and rendering a stereo head with two wrists.
+
 ```bash
 python scripts/sync_view.py head.mp4 wristL.mp4 wristR.mp4 -o take_sync.mp4
 
-# or let it group cameras by take automatically
+# or let it group Mono cameras by take automatically (one folder, .json sidecars)
 python scripts/sync_view.py --auto path/to/recordings -o take_sync.mp4
 
 # preview in a window instead of writing a file

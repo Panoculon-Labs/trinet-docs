@@ -53,7 +53,8 @@ remove a camera from a kit, see [Set up a Wrist Kit](../get-started/wrist-kit-se
 
 Each camera writes its own files to its own card. Takes recorded together share a kit prefix
 (`grp…`) in their file names, so the matching files from each camera are easy to group. The
-[Python toolkit](../toolkit/index.md) can play kit takes side by side and verify their sync, and
+[Python toolkit](../toolkit/index.md) can play kit takes side by side and verify their sync — see
+[View a kit take in sync](../toolkit/kit-takes.md) — and
 the [wireless UTC tool](../toolkit/wireless-utc.md) can place every take on UTC time.
 
 ## Watching a kit in the field
