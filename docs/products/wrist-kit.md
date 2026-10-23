@@ -72,5 +72,10 @@ stops unexpectedly. The app only listens; it never connects to or controls the c
 | Camera to camera within a kit | Under 1 ms (measured: typically about 50 µs — [validation report](../data/sync-validation.md)) |
 
 For the first one to two seconds after a take starts, cameras that are still locking on can be less
-accurate; trim the first seconds if you need the tightest alignment. More in
+accurate; trim the first seconds if you need the tightest alignment.
+
+In a kit, every camera records at about **29.7 fps** instead of 30 — on purpose, so each camera can
+hold its frames in step with the kit's master camera. A camera recording on its own runs at 30 fps.
+To check a take — frame drops, frame rate, sync — see
+[Check a recording or kit take](../toolkit/visualize.md#check-a-recording-or-kit-take). More in
 [Timing and sync](../data/sync.md).

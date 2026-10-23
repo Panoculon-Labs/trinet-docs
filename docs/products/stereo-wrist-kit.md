@@ -48,6 +48,7 @@ are paired at the factory; more cameras can join the same kit. See [Wrist Kit](w
 | Frame timestamp precision (jitter) | About 10 µs |
 | Head stereo, left eye to right eye | Both eyes triggered from a single clock |
 | Camera to camera within the kit | **Under 1 ms** — measured typically about 50 µs ([validation report](../data/sync-validation.md)) |
+| Frame rate in the kit | About **29.7 fps** on every camera — intentionally slightly below 30 so the cameras hold their frames in step (30 fps when a camera records on its own) |
 
 - Frames are timestamped at **mid-exposure**; motion samples at the moment they're measured — all on
   the camera clock, and across the kit on the shared kit clock.
@@ -62,7 +63,7 @@ Method and details: [Timing and sync](../data/sync.md).
 | | Head: Trinet Stereo | Head: Trinet Stereo GS | Wrists: Trinet Mono |
 |---|---|---|---|
 | Sensors | 2 × 3 MP rolling shutter | 2 × 2.3 MP **global shutter** | 1, rolling shutter |
-| Video | 1920×1080 per eye, 30 fps | 1920×1080 per eye, 30 fps | 1920×1080, 30 fps |
+| Video | 1920×1080 per eye, 30 fps (≈29.7 in a kit) | 1920×1080 per eye, 30 fps (≈29.7 in a kit) | 1920×1080, 30 fps (≈29.7 in a kit) |
 | Effective field of view | ≈158° H × 94° V per eye (from calibration) | ≈180° H × 96° V per eye (from calibration) | 150° H × 90° V |
 | Codec on card | H.264 (default) or H.265 | H.264 (default) or H.265 | H.264 (default) or H.265 |
 | Card bitrate | 10 Mbps constant, per eye | 10 Mbps constant, per eye | ≈15 Mbps variable (adjustable) |
@@ -99,7 +100,8 @@ matching files group easily. The device tag after it says which camera wrote the
 To match takes across the three cards and play them side by side, see
 [View a kit take in sync](../toolkit/kit-takes.md).
 
-The [Python toolkit](../toolkit/index.md) reads every file, plays kit takes side by side, checks sync,
+The [Python toolkit](../toolkit/index.md) reads every file, plays kit takes side by side,
+[checks frame drops, frame rate and sync](../toolkit/visualize.md#check-a-recording-or-kit-take),
 exports to [MCAP / ROS 2](../toolkit/mcap.md) and places every take on
 [UTC](../toolkit/wireless-utc.md). Formats: [File formats](../data/file-formats.md).
 
