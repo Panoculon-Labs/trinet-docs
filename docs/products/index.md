@@ -13,7 +13,7 @@ odometry and SLAM, and research on how people move and use their hands.
 Every Trinet camera can:
 
 - record on its own to a memory card with one button — no phone or computer needed;
-- stream live over USB to an Android phone, a computer or (Mono) an iPhone;
+- stream live over USB to an Android phone, a computer or an iPhone;
 - join other Trinet cameras in a wirelessly synchronized kit.
 
 ## Compare
@@ -28,7 +28,7 @@ Every Trinet camera can:
 | Audio | Stereo microphones | Stereo microphones | Stereo microphones | Per camera |
 | Card storage (default settings) | ≈7 GB per hour | ≈10 GB per hour | ≈10 GB per hour | Per camera |
 | Factory calibration | Reference calibration; per-unit on request | Every unit | Every unit | Per camera |
-| USB live stream | Android, computer, iPhone | Android, computer | Android, computer | Per camera |
+| USB live stream | Android, computer, iPhone | Android, computer, iPhone (firmware 0.5.13+) | Android, computer, iPhone (firmware 0.5.13+) | Per camera |
 | Multi-camera sync | ✓ | ✓ | ✓ | Built in |
 
 Details for each product:

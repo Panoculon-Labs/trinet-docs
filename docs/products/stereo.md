@@ -33,7 +33,7 @@ ready for stereo depth, 3D reconstruction and stereo visual-inertial odometry.
 | Audio | Stereo microphones, AAC, 44.1 kHz on card recordings; [hardware mute switch](../get-started/mute-switch.md) |
 | IMU–video alignment | Sub-millisecond, hardware-timestamped |
 | Recording to card | One button; no limit on take length |
-| Live streaming | USB webcam mode: one 3840×1080 side-by-side stream (both eyes) to Android or a computer |
+| Live streaming | One 3840×1080 side-by-side stream (both eyes): USB webcam mode to Android or a computer, or iPhone mode to an iPhone (firmware 0.5.13 or newer) |
 | Wireless | Multi-camera sync; recording-status broadcast readable by the Trinet app |
 | Calibration | Every unit calibrated at the factory; stored on the camera and embedded in every recording |
 | Weight | About 51 g |
@@ -65,4 +65,5 @@ Reconnect power to start again. In a [Wrist Kit](wrist-kit.md), a kit-wide cooli
 instead. See [Heat and thermal protection](../power-and-care/thermal.md).
 
 !!! info "iPhone"
-    Trinet Stereo streams in USB webcam mode only. iPhone streaming is available on Trinet Mono.
+    With camera firmware 0.5.13 or newer, Trinet Stereo also streams to an iPhone in iPhone mode —
+    both eyes side by side, in H.264 or H.265. See the [iOS SDK](../sdk/ios.md).

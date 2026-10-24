@@ -10,9 +10,9 @@ Trinet cameras connect over USB in one of two ways, depending on what the host a
 | | **USB webcam mode** | **iPhone mode** |
 |---|---|---|
 | Used by | Android (Trinet app, Android SDK), computers | iPhone (iOS SDK) |
-| Cameras | All | Trinet Mono |
+| Cameras | All | Trinet Mono (V4); Stereo and Stereo GS with firmware 0.5.13 or newer |
 | Appears as | A standard USB video device | A USB network adapter (Settings → Ethernet on iPhone) |
-| Video | H.264, pulled by the app | H.264, over the USB network link |
+| Video | H.264, pulled by the app | H.264 or H.265, over the USB network link |
 | Camera settings | Through the SDK | Through the SDK |
 | Light when ready | <span class="led led-white"></span> White | <span class="led led-cyan"></span> Cyan |
 
@@ -24,7 +24,8 @@ link and never goes over Wi-Fi or cellular.
 
 The transport differs; everything above it is shared, so recordings and tools work across platforms:
 
-- **Video:** H.264 (the live stream) with parameter sets sent up front.
+- **Video:** H.264 (or H.265 in iPhone mode) with parameter sets sent up front; stereo cameras send
+  both eyes side by side in one 3840×1080 frame.
 - **Motion data** travels inside the video stream with every frame, with the frame's timestamp on the
   same camera clock — no separate sync channel.
 - **On disk:** `.mp4` + `.imu` + `.vts`, byte-for-byte the same formats on Android, iOS, the camera's

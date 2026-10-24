@@ -62,7 +62,8 @@ USB webcam mode
 :   The camera appears as a standard USB video device to Android phones and computers.
 
 iPhone mode
-:   The camera appears as a USB network adapter so iPhone apps can stream from it (Trinet Mono).
+:   The camera appears as a USB network adapter so iPhone apps can stream from it (Trinet Mono, and
+    Stereo and Stereo GS with firmware 0.5.13 or newer).
 
 Wireless status
 :   Bluetooth broadcasts of each camera's recording state, read by the Trinet app without connecting.

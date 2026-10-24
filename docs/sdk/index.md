@@ -12,7 +12,7 @@ files the camera writes, frame-accurate playback, camera settings, calibration a
 | Platform | Distribution | Version | Transport |
 |---|---|---|---|
 | **Android** | Prebuilt AAR (`com.panoculon:trinet-sdk:0.5.3`) + demo APK on [Releases](https://github.com/Panoculon-Labs/Trinet-SDK/releases) | 0.5.3 | USB webcam (UVC) |
-| **iOS** | Swift source via Swift Package Manager | 0.2.1 | USB network (iPhone mode) |
+| **iOS** | Swift source via Swift Package Manager (`from: "0.5.4"`) | 0.3.5 | USB network (iPhone mode) |
 
 ## Camera compatibility
 
@@ -79,5 +79,7 @@ update. The [Trinet app](../app/index.md) on Google Play is built on the same SD
 
 ## iOS
 
-See [iOS SDK](ios.md). iPhones connect to Trinet Mono in iPhone mode; the two platforms carry the same
+See [iOS SDK](ios.md), which starts with a step-by-step guide to building the demo app and recording
+on your iPhone. iPhones connect to Trinet Mono, and to Stereo and Stereo GS with firmware 0.5.13 or
+newer, in iPhone mode; the two platforms carry the same
 video and motion data and write the same files — see [USB transports](transports.md).

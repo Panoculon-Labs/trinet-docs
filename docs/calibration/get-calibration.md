@@ -15,7 +15,7 @@ There are three ways to read it. Pick the one that matches what you have:
 |---|---|---|
 | A recording from the camera | [From an MP4](#from-a-recording-mp4) | Windows, macOS, Linux |
 | The camera, in USB webcam mode | [Over USB (UVC)](#over-usb-webcam-mode-uvc) | Linux |
-| A Trinet Mono, in iPhone mode | [Over USB networking (NCM)](#over-usb-networking-iphone-mode-ncm) | Windows, macOS, Linux |
+| The camera, in iPhone mode | [Over USB networking (NCM)](#over-usb-networking-iphone-mode-ncm) | Windows, macOS, Linux |
 
 All three give the same calibration. The camera embeds exactly what it has stored into every
 recording it makes.
@@ -64,7 +64,8 @@ on Android.
 
 ## Over USB networking, iPhone mode (NCM)
 
-For **Trinet Mono** in **iPhone** mode. The light turns <span class="led led-cyan"></span> cyan.
+For a camera in **iPhone** mode: Trinet Mono, or Stereo and Stereo GS with firmware 0.5.13 or newer.
+The light turns <span class="led led-cyan"></span> cyan.
 To switch the camera to this mode, see [Recording modes](../get-started/modes.md).
 
 1. Connect the camera to the computer with a USB-C cable. The computer sees a new wired network

@@ -11,7 +11,7 @@ A Trinet camera starts in one of three modes:
 |---|---|---|
 | **Card recording** | Records video, motion data and audio to the memory card with the button | <span class="led led-green"></span> Green |
 | **USB webcam** | Streams live over USB to the [Trinet app](../app/index.md) on Android, or to a computer | <span class="led led-white"></span> White |
-| **iPhone** (Trinet Mono) | Streams live over USB to an iPhone app built with the [iOS SDK](../sdk/ios.md) | <span class="led led-cyan"></span> Cyan |
+| **iPhone** | Streams live over USB to an iPhone app built with the [iOS SDK](../sdk/ios.md) | <span class="led led-cyan"></span> Cyan |
 
 ## How the camera chooses
 
@@ -32,7 +32,7 @@ To force a mode with a card inserted, create a text file on the card at
     mode=uvc
     ```
 
-=== "iPhone (Trinet Mono)"
+=== "iPhone"
 
     ```ini
     mode=ncm
@@ -47,8 +47,9 @@ To force a mode with a card inserted, create a text file on the card at
 Insert the card and power on; the light confirms the mode.
 
 !!! note "Stereo and iPhone"
-    Trinet Stereo and Stereo GS stream in USB webcam mode only. On a stereo camera, `mode=ncm`
-    starts USB webcam mode.
+    Trinet Stereo and Stereo GS need camera firmware [0.5.13](../firmware/release-notes.md#0513) or
+    newer for iPhone mode, and stream both eyes side by side. On older firmware, `mode=ncm` on a
+    stereo camera starts USB webcam mode instead.
 
 ## Switching modes
 

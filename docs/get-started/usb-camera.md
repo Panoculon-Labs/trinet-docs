@@ -32,19 +32,22 @@ computer records it.
 
     Trinet Stereo and Stereo GS stream both eyes as one 3840×1080 side-by-side image.
 
-=== "iPhone (Trinet Mono)"
+=== "iPhone"
 
-    iPhones connect to Trinet Mono in **iPhone mode**:
+    iPhones connect in **iPhone mode** — Trinet Mono, and Trinet Stereo and Stereo GS with camera
+    firmware 0.5.13 or newer:
 
     1. Put a card in the camera with `Trinet/trinet_mode.conf` containing `mode=ncm`
        ([details](modes.md#the-mode-file)), or choose iPhone in the app's Boot mode.
     2. Power the camera; the light turns <span class="led led-cyan"></span> **cyan**.
     3. Connect it to the iPhone and open an app built with the [iOS SDK](../sdk/ios.md). The SDK
-       includes a demo app you can build and run.
+       includes a demo app you can build and run — the [iOS SDK page](../sdk/ios.md#get-started)
+       walks through it step by step.
 
 ## Good to know
 
-- The live stream is always **H.264**, 30 fps.
+- The live stream runs at 30 fps. In USB webcam mode it is always **H.264**; in iPhone mode it is
+  H.264 or, on firmware that supports it, H.265 (chosen in the iOS app).
 - Settings you change in the app are stored on the camera. On Trinet Mono they apply to card
   recordings too; Trinet Stereo and Stereo GS card recordings always use 10 Mbps per eye, whatever
   the bitrate setting (the recording codec setting does apply).

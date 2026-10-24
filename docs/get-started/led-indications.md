@@ -62,7 +62,7 @@ See [Set up a Wrist Kit](wrist-kit-setup.md).
 | Light | Meaning |
 |---|---|
 | <span class="led led-white"></span> White, solid | USB webcam mode — ready for the Trinet app or a computer |
-| <span class="led led-cyan"></span> Cyan, solid | iPhone mode — ready for an iPhone (Trinet Mono) |
+| <span class="led led-cyan"></span> Cyan, solid | iPhone mode — ready for an iPhone |
 | <span class="led led-magenta"></span> Magenta (pink), solid | Receiving a firmware update — **keep it connected** |
 | <span class="led led-red led-blink"></span> Red, blink (1 s on, 1 s off) | USB or update mode could not start — reconnect the camera |
 

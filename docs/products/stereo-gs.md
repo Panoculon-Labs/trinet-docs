@@ -33,7 +33,7 @@ factory calibration, the app and the SDK — works exactly like Trinet Stereo.
 | Audio | Stereo microphones, AAC, 44.1 kHz on card recordings; [hardware mute switch](../get-started/mute-switch.md) |
 | IMU–video alignment | Sub-millisecond, hardware-timestamped |
 | Recording to card | One button; no limit on take length |
-| Live streaming | USB webcam mode: one 3840×1080 side-by-side stream (both eyes) to Android or a computer |
+| Live streaming | One 3840×1080 side-by-side stream (both eyes): USB webcam mode to Android or a computer, or iPhone mode to an iPhone (firmware 0.5.13 or newer) |
 | Wireless | Multi-camera sync; recording-status broadcast readable by the Trinet app |
 | Calibration | Every unit calibrated at the factory; stored on the camera and embedded in every recording |
 | Weight | About 51 g |

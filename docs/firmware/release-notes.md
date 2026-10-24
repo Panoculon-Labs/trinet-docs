@@ -21,6 +21,10 @@ Stereo GS. To update, see [Update the firmware](index.md).
   split its recordings used to report "off" until you chose a length yourself. It now reports the
   length it will use.
 - Audio and video stay in step across a split, and each take plays on its own.
+- **Stream to an iPhone.** Stereo and Stereo GS now work in iPhone mode, streaming both eyes side by
+  side to an app built with the [iOS SDK](../sdk/ios.md), in H.264 or H.265.
+- **New settings for apps:** split recordings, rotating the picture 180° for an upside-down mount, and
+  an uncompressed `.wav` copy of the audio beside each card recording.
 
 ## 0.5.9 — 28 September 2026 { #059 }
 <span class="trinet-badge">Mono</span> <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>

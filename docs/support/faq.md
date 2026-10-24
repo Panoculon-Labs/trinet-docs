@@ -106,8 +106,11 @@ description: Frequently asked questions about Trinet cameras — recording lengt
     Python reader make conversion to other dataset formats straightforward.
 
 ??? question "Is there an iPhone app?"
-    iPhones connect to Trinet Mono through apps built with the [iOS SDK](../sdk/ios.md), which includes
-    a demo app you can build. The ready-made Trinet app is for Android.
+    iPhones connect to Trinet Mono — and to Trinet Stereo and Stereo GS with camera firmware 0.5.13
+    or newer — through apps built with the [iOS SDK](../sdk/ios.md). The SDK includes a demo app
+    that you build on a Mac and run on your own iPhone; the
+    [step-by-step guide](../sdk/ios.md#get-started) takes you through it. The ready-made Trinet app
+    on Google Play is for Android.
 
 ## Buying and warranty
 
