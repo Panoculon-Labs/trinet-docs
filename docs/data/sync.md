@@ -55,6 +55,37 @@ for each video frame f:
 The [Python toolkit](../toolkit/visualize.md) can draw motion data over the video and check the
 alignment visually and numerically.
 
+**Motion data starts first.** The motion sensor starts a moment before the cameras, so the first
+motion samples of a recording — typically about half a second — come before its first video frame.
+That is warm-up, not an offset: align by timestamp, and samples before the first frame can simply be
+ignored. Never line the streams up by their first sample.
+
+## Left and right on Trinet Stereo
+
+[Trinet Stereo](../products/stereo.md) captures both eyes together: its two image sensors are
+triggered at the same instant, within microseconds, on every frame. Each eye is saved to its own video
+(`_L.mp4`, `_R.mp4`) with its own frame-timestamp file (`_L.vts`, `_R.vts`), and the two videos do not
+necessarily start on the same frame — one eye's video can begin, and end, one frame after the other.
+The same applies to recordings from [Trinet Stereo GS](../products/stereo-gs.md).
+
+**Pair the eyes by their `.vts` files, not by frame position in the videos:**
+
+- Row *i* of a `.vts` file describes frame *i* of its video.
+- Every row carries the frame's timestamp and a **frame number** counted from the same starting point
+  in both eyes. Rows with the same frame number — equivalently, the same timestamp — were captured
+  together.
+
+```text
+left  = rows of take0001_L.vts      # one row per frame of take0001_L.mp4
+right = rows of take0001_R.vts      # one row per frame of take0001_R.mp4
+for each frame number n present in both:
+    pair left video frame  (row index of n in left)
+    with right video frame (row index of n in right)
+```
+
+If a recording was cut short by a power loss, the end of a video and the end of its `.vts` file can
+differ by up to a second; pair only the frames present in both videos and both `.vts` files.
+
 ## Across cameras (Wrist Kit)
 
 Cameras in a kit share a clock over a short-range radio link:
