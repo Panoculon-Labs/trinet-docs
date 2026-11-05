@@ -45,7 +45,15 @@ Trinet/recording/
 └── …
 ```
 
-Left and right are as seen by the wearer.
+Left and right are as seen by the wearer. Pair left and right frames by their `.vts` files, not by
+frame position in the videos — see [Left and right on Trinet Stereo](../data/sync.md#left-and-right-on-trinet-stereo).
+
+While a take is being recorded and saved, a `take0001.inprogress` file sits next to it and is removed
+once the take is complete. If one is still there, the take was interrupted — power was lost while
+recording, or while the light was white — and the camera repairs the take automatically the next time
+it starts with that card (see [Inspect and repair](../toolkit/inspect-and-repair.md)). To avoid it, stop
+the recording and wait for the light to turn green before disconnecting power or removing the card;
+long recordings take longer to save.
 
 ### Split recordings
 

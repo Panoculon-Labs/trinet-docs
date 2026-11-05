@@ -14,8 +14,16 @@ written by a Trinet camera carries the **Trinet Metadata Format (TMF)**:
 | `moov/udta/tmfm` | Recording metadata as JSON: camera, firmware, codec, sync state, frame-drop summary, temperature range |
 | `moov/udta/tmfc` | The camera's calibration, as a binary blob |
 
-Sharing just the `.mp4` is therefore enough: the `.imu`, `.vts` and `.tel` files can be rebuilt from
-it byte for byte. Video players ignore the extra track; `ffprobe` lists it as a `data` stream.
+For recordings up to about 20 minutes, sharing just the `.mp4` is therefore enough: the `.imu`,
+`.vts` and `.tel` files can be rebuilt from it byte for byte. Video players ignore the extra track;
+`ffprobe` lists it as a `data` stream.
+
+!!! note "Long and repaired recordings: keep the `.imu`, `.vts` and `.tel` files"
+    Recordings longer than about 20 minutes (the exact length depends on the camera's free memory),
+    and recordings the camera [repaired after a power loss](../toolkit/inspect-and-repair.md), carry
+    the recording metadata (`tmfm`) and the calibration (`tmfc`) but **not** the timed track. Their
+    motion data and frame timestamps are in the `.imu`, `.vts` and `.tel` files, which the camera
+    writes for every recording and which are always complete — keep them with the video.
 
 !!! warning "Re-encoding removes TMF"
     Anything that re-encodes or re-muxes the file — video editors, many converters, some upload
@@ -111,6 +119,12 @@ little-endian throughout. It carries, as separate streams:
 | `TMPC` | Motion-sensor temperature (°C) | Motion rate |
 | `TFRM` | Per-frame timestamp records — the `.vts` entries | Per frame |
 | `TSOC` | Thermal telemetry records — the `.tel` entries | 1 Hz |
+
+!!! note "Align by the timestamps inside the track"
+    The track begins a few seconds before the first video frame, because motion and thermal data are
+    recorded from before the video starts. Its position on the MP4 timeline therefore does not line up
+    with the video: use the camera-clock timestamps it carries (`TSNS`, `TFRM`), exactly as with the
+    `.imu` and `.vts` files — see [Timing and sync](sync.md).
 
 The first chunk also carries the original `.imu`, `.vts` and `.tel` file headers, which is what makes a
 byte-identical rebuild possible. The complete byte-level layout is in the toolkit's

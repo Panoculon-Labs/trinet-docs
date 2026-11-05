@@ -31,6 +31,16 @@ description: Frequently asked questions about Trinet cameras — recording lengt
     Normally no — each take is one file set. On Mono a new part is started after a cooling pause, and
     takes are saved at 8 hours.
 
+??? question "What is the `.inprogress` file next to a Stereo take?"
+    It marks a take that was not completely saved: power was lost while recording, or while the light
+    was white. The video plays up to that point, and the camera repairs the take automatically the next
+    time it starts with that card. Stop the recording and wait for green before unplugging. See
+    [Files on the card](../get-started/files-on-the-card.md#trinet-stereo-and-stereo-gs).
+
+??? question "Why are the left and right files of a Stereo take different sizes?"
+    Each eye is encoded separately, so the two videos are never exactly the same size. The `.vts`
+    files show how many frames each eye holds.
+
 ## Video
 
 ??? question "What resolution and frame rate does Trinet record?"
@@ -54,6 +64,16 @@ description: Frequently asked questions about Trinet cameras — recording lengt
 ??? question "How accurate is the sync?"
     Motion data to video: sub-millisecond, hardware-timestamped. Camera to camera in a Wrist Kit: under
     1 ms. See [Timing and sync](../data/sync.md).
+
+??? question "The left and right videos of a Stereo recording look one frame apart"
+    Both eyes are captured together, but one eye's video can begin one frame after the other. Pair
+    frames by the `.vts` files — by frame number or timestamp — never by frame position in the videos.
+    See [Left and right on Trinet Stereo](../data/sync.md#left-and-right-on-trinet-stereo).
+
+??? question "Why does the motion data start before the video?"
+    The motion sensor starts a moment before the cameras, so about the first half second of motion data
+    comes before the first frame. Align by timestamp; the earlier samples can be ignored. See
+    [Timing and sync](../data/sync.md).
 
 ??? question "Can Trinet sync to an external clock, timecode or trigger?"
     Trinet cameras have no external timecode, trigger or network time input. Cameras in a
