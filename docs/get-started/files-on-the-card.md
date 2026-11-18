@@ -15,6 +15,9 @@ keep them together.
 | `.vts` | One timestamp per video frame, on the same clock as the motion data. |
 | `.json` | A small, human-readable summary of the recording: session and kit IDs, this camera's role and device ID. |
 
+With [encryption](../data/encryption.md) on, every take also has a `.tkey` file — the take's key,
+locked with your public key. Keep it with the take: without it the take can't be decrypted.
+
 The `.imu` and `.vts` files are binary — open them with the [Python toolkit](../toolkit/index.md) or
 the [SDK](../sdk/index.md). Their layout is documented in [File formats](../data/file-formats.md).
 
@@ -31,7 +34,10 @@ Trinet/
 
 Files are named `recording<session>_<part>`. The session number increases with every take. A take
 normally has one part; a new part is started when recording resumes after a
-[cooling pause](../power-and-care/thermal.md) (`recording3_2`, `recording3_3`, …).
+[cooling pause](../power-and-care/thermal.md), and at every split point when
+[split recordings](../app/camera-settings.md#set-split-recordings-chunking) is on (`recording3_2`,
+`recording3_3`, …; firmware 0.5.16 or newer). Each part is a complete recording with its own
+`.imu` and `.vts`.
 
 ## Trinet Stereo and Stereo GS
 

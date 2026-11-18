@@ -8,6 +8,51 @@ description: What's new in every Trinet camera firmware release, from 0.2.0 to t
 Newest first. Products: **Mono** = Trinet Mono, **Stereo** = Trinet Stereo, **Stereo GS** = Trinet
 Stereo GS. To update, see [Update the firmware](index.md).
 
+## 0.5.16 — 18 November 2026 { #0516 }
+<span class="trinet-badge">Mono</span> <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
+
+- **The exposure range you set is always respected**, on card recordings as well as over USB.
+  The maximum is a hard limit. Under mains lighting the camera still picks a flicker-free exposure
+  when one fits under your maximum (10 ms at 50 Hz, 8.33 ms at 60 Hz); if your maximum is shorter,
+  the maximum wins and you may see some flicker. Before, Stereo card recordings used 0.1–25 ms
+  whatever you set. **0.05 ms** is now accepted as the minimum. See
+  [Camera settings](../app/camera-settings.md#video).
+- **Settings apply without a restart.** Exposure range and mains frequency apply at once;
+  bitrate, rate control and keyframe interval the next time the stream starts; the card audio
+  format from the next recording. The app tells you which. (Rotating the picture, the audio sample
+  rate, the boot mode and *Restore defaults* still restart the camera.)
+- **Motion data starts with the first saved frame**, a few milliseconds before it, instead of about
+  half a second early. Each part of a split recording covers its own first frame too.
+- **Audio follows the 180° rotation:** with the picture rotated, the left and right sound channels
+  are swapped as well, so what is on the left of the picture is heard on the left.
+- **Encrypted recordings.** The camera can encrypt everything it writes to its card, with the key
+  managed from the app. See [Encrypted recordings](../data/encryption.md).
+- **If power is lost while a take is finishing, no video is lost.** The automatic repair used to
+  drop the last second of a take cut off while the light was white; it now keeps every frame.
+- <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
+  **Left and right start and end on the same frame**, so both videos of a take have the same
+  number of frames, and the frame number in the `.vts` names the same moment in both eyes. In
+  earlier firmware one eye could start or end one frame before the other — pair those recordings
+  by the `.vts`, as described in
+  [Left and right on Trinet Stereo](../data/sync.md#left-and-right-on-trinet-stereo).
+- <span class="trinet-badge">Stereo</span> **Clock accessory and button:** with the clock accessory
+  fitted, recordings keep the correct date and time; the record button responds to every press.
+- <span class="trinet-badge">Mono</span> **Split recordings work.** With a split length set, the
+  camera used to stop after the first part and ignore the button until it was unplugged. Each part
+  is now saved as `recording<session>_1`, `_2`, … and the button stops the recording as usual.
+
+## 0.5.15 — 3 November 2026 { #0515 }
+<span class="trinet-badge">Mono</span> <span class="trinet-badge">Stereo GS</span>
+
+- **Clock accessory:** with the clock accessory fitted, recordings keep the correct date and time.
+- The record button responds to every press, including quick taps while recording.
+- Mono: available on cameras ordered with card encryption.
+
+## 0.5.14 — 26 October 2026 { #0514 }
+<span class="trinet-badge">Mono</span> <span class="trinet-badge">Stereo</span>
+
+- Rotating the picture 180° no longer stops the camera working as a USB webcam.
+
 ## 0.5.13 — 21 October 2026 { #0513 }
 <span class="trinet-badge">Stereo</span> <span class="trinet-badge">Stereo GS</span>
 

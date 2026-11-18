@@ -55,10 +55,13 @@ for each video frame f:
 The [Python toolkit](../toolkit/visualize.md) can draw motion data over the video and check the
 alignment visually and numerically.
 
-**Motion data starts first.** The motion sensor starts a moment before the cameras, so the first
-motion samples of a recording — typically about half a second — come before its first video frame.
-That is warm-up, not an offset: align by timestamp, and samples before the first frame can simply be
-ignored. Never line the streams up by their first sample.
+**Motion data starts with the video.** With firmware [0.5.16](../firmware/release-notes.md#0516)
+or newer, the motion data of a card recording starts a few milliseconds before the first video
+frame's exposure — enough to cover that frame — and so does each part of a split recording. With
+earlier firmware the motion sensor started a moment before the cameras, so about the first half
+second of motion samples came before the first frame. Either way that is warm-up, not an offset:
+align by timestamp, and samples before the first frame can simply be ignored. Never line the
+streams up by their first sample.
 
 ## Left and right on Trinet Stereo
 

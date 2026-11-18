@@ -11,6 +11,18 @@ The Trinet app, the Android SDK and the SDK demo app share one version number. G
 [Google Play](https://play.google.com/store/apps/details?id=com.panoculonlabs.trinet); the SDK and demo
 APK are on [GitHub Releases](https://github.com/Panoculon-Labs/Trinet-SDK/releases).
 
+### 0.5.7 — 18 November 2026 { #057 }
+
+- **Exposure:** 0.05 ms is accepted as the minimum, values are entered and shown the same way in
+  every language setting (a decimal comma works), and a value the camera refuses is reported
+  instead of shown as saved.
+- **Settings apply at once:** the app no longer asks to restart the camera after most changes, and
+  tells you whether a setting applies now, from the next recording, or the next time the stream
+  starts.
+- **SD encryption** card in Camera settings: install, replace or remove the camera's recording key.
+  The private key is used only on the phone. See [Encrypted recordings](../data/encryption.md).
+- Needs camera firmware [0.5.16](release-notes.md#0516) for these features.
+
 ### 0.5.3 — 28 September 2026 { #053 }
 
 - New **[Wireless status](../app/wireless-status.md)**: see every nearby camera and kit recording to

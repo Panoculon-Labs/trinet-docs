@@ -9,6 +9,11 @@ Settings are stored **on the camera**, so they stay with it whichever phone or c
 Trinet Mono they apply to card recordings as well as USB streaming. Settings a camera's firmware
 doesn't support yet are shown with *Update the camera firmware to enable them*.
 
+With camera firmware [0.5.16](../firmware/release-notes.md#0516) or newer, most settings apply
+without restarting the camera, and the app tells you when a change takes effect: **now**, **from
+the next recording**, or **the next time the stream starts**. Only the picture rotation, the audio
+sample rate, the boot mode and *Restore defaults* still restart the camera.
+
 ## Picture
 
 Brightness, contrast, saturation, sharpness, gain, white balance (automatic or a colour
@@ -22,11 +27,11 @@ On cameras with microphones: mute, automatic gain, gain level and sample rate (1
 
 | Setting | What it does |
 |---|---|
-| **Bitrate** | 1–20 Mbps (0.5 Mbps steps), with constant (CBR) or variable (AVBR) rate control. The camera restarts to apply it. Stereo card recordings always use 10 Mbps per eye. |
+| **Bitrate** | 1–20 Mbps (0.5 Mbps steps), with constant (CBR) or variable (AVBR) rate control. Applies the next time the stream starts (firmware 0.5.16; earlier firmware restarts the camera). Stereo card recordings always use 10 Mbps per eye. |
 | **Recording codec** | **H.264** or **H.265** for recordings the camera writes to its own card. Applies from the next take, no restart. The live USB stream is always H.264. Needs camera firmware 0.5.7 or newer on stereo cameras (0.5.9 on Mono). |
-| **Exposure range** | Minimum and maximum exposure time. |
+| **Exposure range** | Minimum and maximum exposure time, 0.05–250 ms. The maximum is a hard limit on every recording path, including the card. Under mains lighting the camera picks a flicker-free exposure when one fits under your maximum (10 ms at 50 Hz, 8.33 ms at 60 Hz); set the maximum shorter than that and the maximum wins, which can show some flicker. Applies at once. Needs camera firmware 0.5.16 and app 0.5.7 for the full range — earlier Stereo firmware used 0.1–25 ms on card recordings whatever you set. |
 | **Split recordings** | Off, 5, 10, 15, 30 or 60 minutes — also called **chunking**. Cameras ordered that way are set at the factory, with lengths up to 240 minutes. A long recording is saved as a series of takes of that length instead of one very large file, so a problem costs you one take rather than everything. Applies from the next recording, no restart. Expect a pause of 10–20 seconds between takes. [How to set it](#set-split-recordings-chunking). |
-| **Location** | Mains frequency, 50 or 60 Hz, to avoid flicker under artificial light. Choose your country's mains frequency. |
+| **Location** | Mains frequency, 50 or 60 Hz, to avoid flicker under artificial light. Choose your country's mains frequency. Applies at once. |
 
 !!! tip "H.264 or H.265?"
     H.264 plays everywhere and decodes fastest — the best default for data pipelines. H.265 gives
@@ -71,8 +76,19 @@ On Stereo and Stereo GS with firmware 0.5.13, each part is saved as **its own nu
 app's description mentions. See [Split recordings](../get-started/files-on-the-card.md#split-recordings)
 for what a split session looks like on the card.
 
+On Trinet Mono, use camera firmware [0.5.16](../firmware/release-notes.md#0516) or newer: each
+part is saved as `recording<session>_1`, `recording<session>_2`, … with a short pause between parts.
+With earlier Mono firmware a split recording stopped after its first part and ignored the button
+until the camera was unplugged — set *Off* there.
+
 If the card says *Not available on this camera's firmware*, [update the camera
 firmware](../get-started/update-firmware.md) first.
+
+## SD encryption
+
+Encrypt everything the camera writes to its memory card, with a key only you hold. Install, replace
+or remove the key here. See [Encrypted recordings](../data/encryption.md) for how to create a key,
+decrypt your recordings, and what happens with a wrong or lost key. Needs camera firmware 0.5.16.
 
 ## Wireless
 
@@ -84,8 +100,8 @@ firmware 0.5.9 or newer; the camera applies a change from its next start.
 
 | Setting | What it does |
 |---|---|
-| **Keyframe interval (GOP)** | 1–600 frames; default 30 (one keyframe per second). The camera restarts to apply it. |
+| **Keyframe interval (GOP)** | 1–600 frames; default 30 (one keyframe per second). Applies the next time the stream starts (firmware 0.5.16; earlier firmware restarts the camera). |
 | **Embed IMU samples** | Carry motion data inside the video stream (on by default; needed by the app and SDK). |
 | **Calibration** | *Read* the calibration stored on the camera, *Upload from file* (a `calibration.json`), or *Lock calibration* so it can't be overwritten. |
 | **Boot mode** | The mode the camera starts in when **no card** is inserted: USB webcam, iPhone or card recording. The camera restarts. See [Recording modes](../get-started/modes.md). |
-| **Restore defaults** | Returns picture, sound and video settings to the factory defaults. Keeps the boot mode, calibration and kit pairing. |
+| **Restore defaults** | Returns picture, sound and video settings to the factory defaults. Keeps the boot mode, calibration, kit pairing and the [encryption key](../data/encryption.md). |

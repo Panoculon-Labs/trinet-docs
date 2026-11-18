@@ -71,6 +71,16 @@ Start with the [status light](../get-started/led-indications.md) — it usually 
     Wireless status needs camera firmware **0.5.9 or newer** and the broadcast switched on (it's on by
     default). Update the camera, and make sure Bluetooth is on for the phone.
 
+??? question "Trinet Mono stays green after I take the card out"
+    Trinet Mono checks for the card when it powers on and when you start a recording, but not while
+    it is idle: after you remove the card the light stays green. Pressing the button then shows that
+    there is no card. Trinet Stereo and Stereo GS notice a removed card straight away (blinking red)
+    and go back to green when it is inserted. To be safe, insert the card before powering on Mono.
+
+??? question "Encrypted takes won't play"
+    They play only after decryption with your private key. See
+    [Encrypted recordings](../data/encryption.md#decrypt-recordings).
+
 ## Files and playback
 
 ??? question "A recording plays as only one second, or an uploader rejects it"

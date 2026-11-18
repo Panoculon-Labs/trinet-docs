@@ -28,8 +28,14 @@ description: Frequently asked questions about Trinet cameras — recording lengt
     calibration — in the same file formats.
 
 ??? question "Does the camera split long recordings into several files?"
-    Normally no — each take is one file set. On Mono a new part is started after a cooling pause, and
-    takes are saved at 8 hours.
+    Only if you turn on [split recordings](../app/camera-settings.md#set-split-recordings-chunking) —
+    otherwise each take is one file set. On Mono a new part is also started after a cooling pause, and
+    takes are saved at 8 hours. On Mono, splitting needs firmware 0.5.16 or newer.
+
+??? question "Can recordings on the card be encrypted?"
+    Yes, with firmware 0.5.16 or newer: the camera encrypts everything it writes to the card with a
+    key only you hold. See [Encrypted recordings](../data/encryption.md), including what happens if a
+    wrong key file is used or the key is lost.
 
 ??? question "What is the `.inprogress` file next to a Stereo take?"
     It marks a take that was not completely saved: power was lost while recording, or while the light
@@ -66,14 +72,15 @@ description: Frequently asked questions about Trinet cameras — recording lengt
     1 ms. See [Timing and sync](../data/sync.md).
 
 ??? question "The left and right videos of a Stereo recording look one frame apart"
-    Both eyes are captured together, but one eye's video can begin one frame after the other. Pair
-    frames by the `.vts` files — by frame number or timestamp — never by frame position in the videos.
+    Both eyes are captured together, but with firmware before 0.5.16 one eye's video can begin or end
+    one frame after the other. Pair frames by the `.vts` files — by frame number or timestamp — never
+    by frame position in the videos. From 0.5.16 both eyes start and end on the same frame.
     See [Left and right on Trinet Stereo](../data/sync.md#left-and-right-on-trinet-stereo).
 
 ??? question "Why does the motion data start before the video?"
-    The motion sensor starts a moment before the cameras, so about the first half second of motion data
-    comes before the first frame. Align by timestamp; the earlier samples can be ignored. See
-    [Timing and sync](../data/sync.md).
+    It covers the first frame's exposure, so it begins a few milliseconds before it. Firmware before
+    0.5.16 started the motion data about half a second before the first frame. Align by timestamp;
+    the earlier samples can be ignored. See [Timing and sync](../data/sync.md).
 
 ??? question "Can Trinet sync to an external clock, timecode or trigger?"
     Trinet cameras have no external timecode, trigger or network time input. Cameras in a
