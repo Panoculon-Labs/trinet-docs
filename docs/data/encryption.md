@@ -36,11 +36,12 @@ work exactly as before. Takes recorded before you installed a key stay unencrypt
 
 <ol class="steps" markdown>
 
-<li markdown>**Create a key pair on your computer** with the Trinet decryption tool
-(`trinet_decrypt.py`, available from [Panoculon support](../support/index.md)):
+<li markdown>**Create a key pair on your computer** with `scripts/decrypt_recordings.py` from the
+[Python toolkit](../toolkit/index.md) (Trinet-tools; it needs the `cryptography` package, installed
+with the toolkit's requirements):
 
 ```bash
-python trinet_decrypt.py keygen my_key.pem my_key.tvk --passphrase
+python scripts/decrypt_recordings.py keygen my_key.pem my_key.tvk --passphrase
 ```
 
 It prints the key's **ID** (16 hexadecimal digits) and writes the private key `my_key.pem` and the
@@ -77,7 +78,7 @@ leaves the phone** and is not stored by the app.
 ## Decrypt recordings
 
 ```bash
-python trinet_decrypt.py decrypt --key my_key.pem --out decrypted/ /path/to/card/Trinet/
+python scripts/decrypt_recordings.py decrypt --key my_key.pem --out decrypted/ /path/to/card/Trinet/
 ```
 
 Give it a single take, a folder or a whole card. It writes normal, playable files — MP4, `.imu`,
@@ -92,8 +93,9 @@ with the [Python toolkit](../toolkit/index.md) and every other tool, like any re
 | The camera already has a key and you didn't give its private key | *The camera already has a key (…): choose its private key* | Choose the private key whose ID the app shows. |
 | You chose the wrong private key to replace or remove the key | *That private key (…) is not the camera's current key (…)*. Nothing changes. | Use the private key with the ID the app shows. The camera also checks the signature itself, so a wrong key is refused even outside the app. |
 | Wrong passphrase | *Wrong passphrase, or this phone cannot open this key format* | Enter the passphrase you set in `keygen`. |
+| The phone can't open your passphrase-protected key | *Wrong passphrase, or this phone cannot open this key format* even with the right passphrase | Make a phone copy without a passphrase: `python scripts/decrypt_recordings.py export-signing-key my_key.pem phone_key.pem`. Keep `phone_key.pem` as secret as `my_key.pem`, and delete it from the phone when done. |
 | The request took too long | *The request expired; try again* | Try again. Each request is single-use and expires after 5 minutes. |
-| You decrypt with a different private key | The tool stops with *recorded for key …, not this private key (…)* and writes nothing. | Use the private key whose ID matches the one in the message. |
+| You decrypt with a different private key | The tool stops with *recorded for key …, not this private key (…)* and writes nothing for that take. | Use the private key whose ID matches the one in the message. |
 | A take's `.tkey` file is missing | The tool stops with *no .tkey … not an encrypted recording?* | Copy the `.tkey` from the card along with the take. A take without its `.tkey` cannot be decrypted. |
 | The camera's stored key is damaged | The camera refuses to record rather than save unencrypted video. | Install the key again (or contact support). |
 
