@@ -142,8 +142,8 @@ description: Frequently asked questions about Trinet cameras — recording lengt
 ## Buying and warranty
 
 ??? question "How do I buy Trinet, or get a quote?"
-    See [panoculonlabs.com/trinet](https://www.panoculonlabs.com/trinet) or email
-    [innovate@panoculonlabs.com](mailto:innovate@panoculonlabs.com?subject=Inquiry%20regarding%20Trinet).
+    Email sales@panoculonlabs.com, or see
+    [panoculonlabs.com/trinet](https://www.panoculonlabs.com/trinet).
 
 ??? question "What does the warranty cover?"
     See [Warranty](warranty.md).

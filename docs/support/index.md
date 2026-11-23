@@ -16,7 +16,7 @@ description: Get help with Trinet — troubleshooting, FAQ, warranty and how to 
 
 ## Contact us
 
-**Email:** [innovate@panoculonlabs.com](mailto:innovate@panoculonlabs.com?subject=Trinet%20support)
+**Email:** support@panoculonlabs.com
 
 To help us help you quickly, include:
 
@@ -30,8 +30,8 @@ To help us help you quickly, include:
 [Trinet-SDK](https://github.com/Panoculon-Labs/Trinet-SDK/issues) ·
 [Trinet-tools](https://github.com/Panoculon-Labs/Trinet-tools/issues).
 
-**Sales and orders:** [panoculonlabs.com/trinet](https://www.panoculonlabs.com/trinet) or
-[innovate@panoculonlabs.com](mailto:innovate@panoculonlabs.com?subject=Inquiry%20regarding%20Trinet).
+**Sales and orders:** sales@panoculonlabs.com, or see
+[panoculonlabs.com/trinet](https://www.panoculonlabs.com/trinet).
 
 Follow Panoculon Labs on [LinkedIn](https://www.linkedin.com/company/panoculon-labs),
 [X](https://x.com/panoculonlabs) and [Instagram](https://www.instagram.com/panoculonlabs/).

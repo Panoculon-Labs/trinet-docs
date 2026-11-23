@@ -50,4 +50,4 @@ Details for each product:
     - **Bimanual manipulation data** with views of both hands: the Trinet Wrist Kit.
 
     For purchasing and availability, see [panoculonlabs.com/trinet](https://www.panoculonlabs.com/trinet)
-    or email [innovate@panoculonlabs.com](mailto:innovate@panoculonlabs.com).
+    or email sales@panoculonlabs.com.

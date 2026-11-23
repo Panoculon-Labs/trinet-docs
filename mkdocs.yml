@@ -108,8 +108,8 @@ extra:
       link: https://www.linkedin.com/company/panoculon-labs
       name: LinkedIn
     - icon: fontawesome/solid/envelope
-      link: mailto:innovate@panoculonlabs.com
-      name: Email Panoculon Labs
+      link: https://docs.panoculonlabs.com/support/#contact-us
+      name: Contact Panoculon Labs
 
 validation:
   omitted_files: warn

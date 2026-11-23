@@ -33,4 +33,4 @@ The live, most up-to-date version of this list is the
   camera may work fine with a kit.
 - If your phone needs a USB-A to USB-C adapter for the bank's USB-A port, any OTG adapter works.
 - Test a new bank with a full-length session before a real data collection.
-- Tested a bank we don't list? Tell us at [innovate@panoculonlabs.com](mailto:innovate@panoculonlabs.com).
+- Tested a bank we don't list? Tell us at support@panoculonlabs.com.
