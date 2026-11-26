@@ -35,7 +35,7 @@ are paired at the factory; more cameras can join the same kit. See [Wrist Kit](w
 |---|---|
 | Cameras | 3 (head + two wrists) — 4 video streams (2 head eyes + 2 wrists) |
 | Motion data | 3 IMUs — one per camera, each at 400 Hz with a magnetometer at about 100 Hz |
-| Audio | Stereo microphones in every camera, each with a hardware [mute switch](../get-started/mute-switch.md) |
+| Audio | Stereo microphones in every camera, each with a hardware [mute switch](../get-started/mute-switch.md) (newer Stereo and Stereo GS head cameras may not have one) |
 | Start / stop | Press the button on **any** camera — the whole kit starts and stops together |
 | Recording | Each camera records to its **own** microSD card; no phone, computer or cables between cameras |
 | Field monitoring | [Trinet app → Wireless status](../app/wireless-status.md) shows every camera's state over Bluetooth (firmware 0.5.9+) |

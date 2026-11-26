@@ -30,7 +30,7 @@ factory calibration, the app and the SDK — works exactly like Trinet Stereo.
 | Lens | Ultra-wide fisheye; effective field of view about 180° horizontal × 96° vertical per eye (from calibration) |
 | Frame timing | Whole frame exposed at once; timestamped at mid-exposure |
 | Motion sensing | 3-axis accelerometer (±8 g), 3-axis gyroscope (±2000 °/s) at 400 Hz; 3-axis magnetometer at about 100 Hz |
-| Audio | Stereo microphones, AAC, 44.1 kHz on card recordings; [hardware mute switch](../get-started/mute-switch.md) |
+| Audio | Stereo microphones, AAC, 44.1 kHz on card recordings; [hardware mute switch](../get-started/mute-switch.md) (newer units may not have one) |
 | IMU–video alignment | Sub-millisecond, hardware-timestamped |
 | Recording to card | One button; no limit on take length |
 | Live streaming | One 3840×1080 side-by-side stream (both eyes): USB webcam mode to Android or a computer, or iPhone mode to an iPhone (firmware 0.5.13 or newer) |

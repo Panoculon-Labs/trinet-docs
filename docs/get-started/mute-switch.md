@@ -1,6 +1,6 @@
 ---
 title: Microphone mute switch
-description: Mute or unmute a Trinet camera's microphones in hardware with the switch on the bottom — which way is which on Mono, Stereo and Stereo GS.
+description: Mute or unmute a Trinet camera's microphones in hardware with the switch on the bottom — which way is which on Mono, Stereo and Stereo GS, and which newer cameras may not have one.
 ---
 
 # Microphone mute switch
@@ -8,6 +8,11 @@ description: Mute or unmute a Trinet camera's microphones in hardware with the s
 Trinet Mono, Trinet Stereo and Trinet Stereo GS have a small **mute switch on the bottom of the
 camera**. It switches the microphones off in hardware — for kitchens, labs, factory floors or any
 space where sound must not be recorded — without relying on a software setting.
+
+!!! note "Newer Stereo and Stereo GS cameras may not have a mute switch"
+    Some newer Trinet Stereo and Trinet Stereo GS cameras ship without a hardware mute switch. If
+    yours has no switch on the bottom, mute the microphones in the
+    [Trinet app's camera settings](../app/camera-settings.md) instead.
 
 ## Which way is which
 
