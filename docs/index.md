@@ -45,7 +45,7 @@ your own software.
 
     [:octicons-arrow-right-24: Trinet Stereo](products/stereo.md)
 
--   ![Trinet Stereo GS](assets/images/product/stereo-front.webp){ .product-shot loading=lazy }
+-   ![Trinet Stereo GS](assets/images/product/stereo-gs-front.webp){ .product-shot loading=lazy }
 
     **Trinet Stereo GS**
 
