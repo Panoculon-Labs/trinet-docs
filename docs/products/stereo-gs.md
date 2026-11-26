@@ -11,7 +11,7 @@ skew and wobble of a rolling shutter. Everything else — two eyes 70 mm apart, 
 factory calibration, the app and the SDK — works exactly like Trinet Stereo.
 
 <figure markdown>
-  ![Trinet Stereo GS, front view](../assets/images/product/stereo-gs-front.webp){ .product-shot width="420" loading=lazy }
+  ![Trinet Stereo GS, front view](../assets/images/product/stereo-gs-front.webp){ .product-shot .on-dark width="420" loading=lazy }
   <figcaption>Trinet Stereo GS shares the Trinet Stereo form factor: two lenses, 70 mm apart.</figcaption>
 </figure>
 

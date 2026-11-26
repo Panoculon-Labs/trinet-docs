@@ -10,7 +10,7 @@ data and audio on one clock. Every unit is calibrated individually at the factor
 ready for stereo depth, 3D reconstruction and stereo visual-inertial odometry.
 
 <figure markdown>
-  ![Trinet Stereo, front view — two lenses 70 mm apart](../assets/images/product/stereo-front.webp){ .product-shot width="420" loading=lazy }
+  ![Trinet Stereo, front view — two lenses 70 mm apart](../assets/images/product/stereo-front.webp){ .product-shot .on-dark width="420" loading=lazy }
   <figcaption>Two ultra-wide cameras, 70 mm apart. Worn on the head strap — see
   [Mounting](../get-started/mounting.md).</figcaption>
 </figure>

@@ -151,6 +151,10 @@
   box-sizing: border-box;
   object-fit: contain;
 }
+/* White camera bodies (Stereo, Stereo GS) wash out on the light backdrop: give them a slate one. */
+.md-typeset img.product-shot.on-dark {
+  background: radial-gradient(circle at 50% 40%, #6b6e75, #3c3e43);
+}
 .md-typeset .photo-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
